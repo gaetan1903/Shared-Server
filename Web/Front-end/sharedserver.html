@@ -11,7 +11,6 @@
             .topnav {
                         overflow: hidden;
                         background-color: white;
-                        position:;
                         position:fixed; left:0px; top:0px;
                         border-radius:0px;
                         opacity:0.7;
@@ -24,6 +23,7 @@
                 position:fixed; left:120px; top:10px;
                 font-family:monospace;
                 font-size:30px;
+                font-style:bold;
                 color:#2ebc4f;
                 }
                 
@@ -35,27 +35,27 @@
                 }  
                              
              .h3{
-                position:absolute; left:230px; top:17px;
+                position:fixed; left:230px; top:17px;
                 font-family:monospace;
                 font-size:20px;
                 color:grey;
                 }
              .h4{
-                position:absolute; left:960px; top:175px;
+                position:fixed; left:960px; top:175px;
                 font-family:monospace;
                 font-size:18px;
                 color:black;
                 opacity:0.7;
                 }
              .h5{
-                position:absolute; left:1045px; top:295px;
+                position:fixed; left:1045px; top:295px;
                 font-family:monospace;
                 font-size:18px;
                 color:black;
                 opacity:0.8;
                 }
              .h6{
-                position:absolute; left:915px; top:110px;
+                position:fixed; left:915px; top:110px;
                 font-family:monospace;
                 font-size:20px;
                 color:black;
@@ -73,6 +73,22 @@
                 font-size:40px;
                 color:grey;
                 }
+             .h9{
+                position:fixed; left:985px; top:475px;
+                font-family:monospace;
+                font-size:17px;
+                color:black;
+                opacity:0.7;
+                }
+             a{
+                position:fixed; left:1145px; top:474px;
+                font-family:monospace;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                }
+             
              
              .creer{
                 position:fixed; left:1145px;top:5px;
@@ -96,28 +112,28 @@
                  width:450px;
                  border-radius:20px;
                  opacity:0.2;
-                 position:absolute; left:870px; top:80px;
-                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+                 position:fixed; left:870px; top:80px;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
                  }
              .im2{
-                 height:100px;
+                 height:65px;
                  width:1366px;
                  opacity:0.8;
-                 position:absolute; left:0px; top:549px;
+                 position:fixed; left:0px; top:584px;
                  }
              .im3{
                  height:450px;
                  width:830px;
                  border-radius:20px;
                  opacity:0.2;
-                 position:absolute; left:20px; top:80px;
-                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+                 position:fixed; left:20px; top:80px;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
                  }
              
                  
                  
              .mail{
-               position:absolute; left:895px; top:200px;
+               position:fixed; left:895px; top:200px;
                width:400px;
                height:65px;
                background-color:grey;
@@ -132,7 +148,7 @@
                        transition-duration:0.3s;
                        }
             .pass{
-               position:absolute; left:895px; top:320px;
+               position:fixed; left:895px; top:320px;
                width:400px;
                height:65px;
                background-color:grey;
@@ -148,7 +164,7 @@
                        }
             
             .login{
-                position:absolute; left:1000px; top:410px;
+                position:fixed; left:1000px; top:410px;
                 color:white;
                 background-color:#032f62;
                 font-family:sans-serif;
@@ -161,32 +177,30 @@
                 transition-duration:0.3s;
                 }
             .login:hover{
-                        position:absolute; left:990px; top:410px;
+                        position:fixed; left:990px; top:410px;
                         width:220px;
                         height:60px;
                         font-size:20px;
                         transition-duration:0.3s;
                         }
-                         
-            
+                        
         </style>
         </head>
         <body>
             
             <div class="topnav"> </div>
             
-            <h class="h1"> <b> Shared </b> </h>
-            <h class="h2"> <b> _ </b> </h>
-            <h class="h3">  <b> server </b>  </h>
-            <h class="h4">   Nom d'utilisateur ou adresse email   </h>
-            <h class="h5">   Mot de passe  </h>
-            <h class="h6">   <b> Se connecter sur <b>  </h>
-            <h class="h7"> <b> Shared </b> </h>
-            <h class="h8"> <b> Server </b> </h>
+            <div class="h1"> <strong> Shared </strong> </div>
+            <div class="h2"> <strong> _ </strong> </div>
+            <div class="h3"> <strong> server </strong>  </div>
+            <div class="h4">  Nom d'utilisateur ou adresse email </div>
+            <div class="h5">  Mot de passe  </div>
+            <div class="h6"> <strong> Se connecter sur </strong>  </div>
+            <div class="h7"> <strong> Shared </strong> </div>
+            <div class="h8"> <strong> Server </strong> </div>
+            <div class="h9"> <strong> Mot de passe oublié ? </strong> </div>
             
-            
-            
-            <button class="creer" type="button"> <b> Créer un compte <b> </button>
+            <button class="creer" type="button">  <b> Créer un compte <b> </button>
             
             <img class=im1 src="w.jpg" alt="white"/>
             <img class=im2 src="black.jpg" alt="white"/>
@@ -197,6 +211,8 @@
                   <input class="pass" type="password" name="pass" >
                   <button class="login" type="submit" name="login"> <b> Se connecter </b> </button>
             </form>
+            
+            <a href="web"> <strong> Cliquez ici. </strong>
                   
            
         </body>
