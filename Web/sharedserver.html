@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>
+                    SharedServer
+                </title>
+        <style>
+        
+            .topnav {
+                        overflow: hidden;
+                        background-color: white;
+                        position:fixed; left:0px; top:0px;
+                        border-radius:0px;
+                        opacity:0.7;
+                        width:1366px;
+                        height:55px;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+                    }
+                    
+             .h1{
+                position:fixed; left:960px; top:175px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:black;
+                opacity:0.7;
+                }
+             .h2{
+                position:fixed; left:1045px; top:295px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:black;
+                opacity:0.8;
+                }
+             .h3{
+                position:fixed; left:925px; top:110px;
+                font-family:sans-serif;
+                font-size:20px;
+                color:black;
+                opacity:0.8;
+                }
+             .h4{
+                position:fixed; left:985px; top:475px;
+                font-family:sans-serif;
+                font-size:17px;
+                color:black;
+                opacity:0.7;
+                }
+             .h5{
+                position:fixed; left:270px; top:605px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                }
+             .h6{
+                position:fixed; left:762px; top:605px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                }
+             .h7{
+                position:fixed; left:1140px; top:605px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                }
+             
+             
+             .lien1{
+                position:fixed; left:1145px; top:474px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#ff0066;
+                opacity:1;
+                transition-duration:0.3s;
+                }
+             .lien2{
+                position:fixed; left:60px; top:605px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                }
+             .lien3{
+                position:fixed; left:965px; top:605px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                }
+             .lien4{
+                position:fixed; left:588px; top:605px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                }
+             
+             
+             .creer{
+                position:fixed; left:1145px;top:5px;
+                background-color:#2ebc4f;
+                color:white;
+                border:none;
+                border-radius:5px;
+                opacity:10;
+                font-size:20px;
+                width:200px;
+                height:45px;
+                transition-duration:0.3s;
+                }
+             .creer:hover{
+                          background-color:#ff6600;
+                          transition-duration:0.3s;
+                         }
+                         
+             .im1{
+                 height:450px;
+                 width:450px;
+                 border-radius:20px;
+                 opacity:0.2;
+                 position:fixed; left:870px; top:80px;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+                 }
+             .im2{
+                 height:65px;
+                 width:1366px;
+                 opacity:0.8;
+                 position:fixed; left:0px; top:584px;
+                 }
+             .im3{
+                 height:450px;
+                 width:830px;
+                 border-radius:20px;
+                 opacity:0.2;
+                 position:fixed; left:20px; top:80px;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+                 }
+             
+             @keyframes im4 {
+                             from{position:fixed; left:190px; top:15px;
+                                  opacity:1;}
+                             to{ position:fixed; left:500px; top:15px;
+                                 opacity:0;}
+                            }
+             .im4{
+                 animation-name:im4;
+                 animation-duration:1.5s;
+                 animation-delay:-1s;
+                 animation-iteration-count:infinite;
+                 animation-direction:;
+                 height:25px;
+                 width:35px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:285px; top:15px;
+                 }
+             .im5{
+                 height:50px;
+                 width:180px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:1070px; top:95px;
+                 transition-duration:0.2s;
+                 }
+             .im5:hover{
+                        height:52px;
+                        width:182px;
+                        transition-duration:0.2s;
+                       }
+             .im6{
+                 height:100px;
+                 width:325px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:250px; top:85px;
+                 transition-duration:0.5s;
+                 }
+             .im6:hover{
+                        height:105px;
+                        width:335px;
+                        transition-duration:0.5s;
+                       }
+             .im7{
+                 height:50px;
+                 width:180px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:10px; top:2px;
+                 transition-duration:0.2s;
+                 }
+             .im7:hover{
+                        height:52px;
+                        width:182px;
+                        transition-duration:0.2s;
+                       }
+             
+             .im8{
+                 height:30px;
+                 width:35px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:230px; top:600px;
+                 transition-duration:0.2s;
+                 }
+             .im9{
+                 height:30px;
+                 width:35px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:550px; top:600px;
+                 transition-duration:0.2s;
+                 }
+             .im10{
+                 height:30px;
+                 width:35px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:720px; top:600px;
+                 transition-duration:0.2s;
+                 }
+             .im11{
+                 height:30px;
+                 width:35px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:920px; top:600px;
+                 transition-duration:0.2s;
+                 }
+             .im12{
+                 height:35px;
+                 width:45px;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:15px; top:600px;
+                 transition-duration:0.2s;
+                 }
+                  
+             .mail{
+               position:fixed; left:895px; top:200px;
+               width:400px;
+               height:65px;
+               background-color:grey;
+               border-radius:5px;
+               color:black;
+               border:none;
+               opacity:0.3;
+               transition-duration:0.3s;
+               }
+            .mail:hover{
+                       opacity:0.5;
+                       transition-duration:0.3s;
+                       }
+            .pass{
+               position:fixed; left:895px; top:320px;
+               width:400px;
+               height:65px;
+               background-color:grey;
+               border-radius:5px;
+               color:black;
+               border:none;
+               opacity:0.3;
+               transition-duration:0.3s;
+               }
+            .pass:hover{
+                       opacity:0.5;
+                       transition-duration:0.3s;
+                       }
+            
+            .login{
+                position:fixed; left:1000px; top:410px;
+                color:white;
+                background-color:#032f62;
+                font-family:sans-serif;
+                font-size:20px;
+                border:none;
+                width:200px;
+                height:40px;
+                opacity:0.9;
+                border-radius:5px;
+                transition-duration:0.3s;
+                }
+            .login:hover{
+                        position:fixed; left:990px; top:410px;
+                        width:220px;
+                        height:60px;
+                        font-size:20px;
+                        transition-duration:0.3s;
+                        }
+                        
+        </style>
+        </head>
+        <body>
+            
+            <div class="topnav"> </div>
+            
+            <div class="h1">  Nom d'utilisateur ou adresse email </div>
+            <div class="h2">  Mot de passe  </div>
+            <div class="h3"> <strong> Se connecter sur </strong>  </div>
+            <div class="h4"> <strong> Mot de passe oublié ? </strong> </div>
+            
+            <button class="creer" type="button">  <b> Créer un compte <b> </button>
+            
+            <img class=im1 src="Images/w.jpg" alt="white"/>
+            <img class=im2 src="Images/black.jpg" alt="black"/>
+            <img class=im3 src="Images/w.jpg" alt="white"/>
+            <img class=im4 src="Images/folder.png" alt="folder_logo"/>
+            <img class=im5 src="Images/sslogo.png" alt="ss_logo"/>
+            <img class=im6 src="Images/sslogo.png" alt="ss_logo"/>
+            <img class=im7 src="Images/sslogo.png" alt="ss_logo"/>
+            <img class=im8 src="Images/gmail.png" alt="gmail_logo"/>
+            <img class=im9 src="Images/fb.png" alt="facebook_logo"/>
+            <img class=im10 src="Images/tels.png" alt="telephone_logo"/>
+            <img class=im11 src="Images/github.png" alt="github_logo"/>
+            <img class=im12 src="Images/esti.png" alt="esti_logo"/>
+          
+            
+            <div class="h5"> <strong> ambatoroka.f-society@gmail.com </strong> </div>
+            <div class="h6"> <strong> +261329903072 </strong> </div>
+            <div class="h7"> <strong> Sharedserver Copyright 2019 </strong> </div>
+            
+            <form>
+                  <input class="mail" type="mail" name="mail" >
+                  <input class="pass" type="password" name="pass" >
+                  <button class="login" type="submit" name="login"> <b> Se connecter </b> </button>
+            </form>
+            
+            <a class="lien1" href="Forgotpass.html"> <strong> Cliquez ici. </strong> </a>
+            <a class="lien2" href="us?.html"> <strong> Qui sommes-nous? </strong> </a>
+            <a class="lien3" href="https://github.com/gaetan1903/Shared-Server"> <strong> Code source </strong> </a>
+            <a class="lien4" href="facebook"> <strong> Shared-server </strong> </a>
+            
+        </body>
+    </html>          
