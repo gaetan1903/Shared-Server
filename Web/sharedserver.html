@@ -13,33 +13,34 @@
                         background-color: white;
                         position:fixed; left:0px; top:0px;
                         border-radius:0px;
-                        opacity:0.7;
+                        opacity:1;
                         width:1366px;
                         height:55px;
                         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
                     }
                     
              .h1{
-                position:fixed; left:960px; top:175px;
-                font-family:sans-serif;
-                font-size:18px;
-                color:black;
-                opacity:0.7;
-                }
-             .h2{
-                position:fixed; left:1045px; top:295px;
-                font-family:sans-serif;
-                font-size:18px;
-                color:black;
-                opacity:0.8;
-                }
-             .h3{
                 position:fixed; left:925px; top:110px;
                 font-family:sans-serif;
                 font-size:20px;
                 color:black;
                 opacity:0.8;
                 }
+             .h2{
+                position:fixed; left:960px; top:175px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:black;
+                opacity:0.5;
+                }
+             .h3{
+                position:fixed; left:1045px; top:295px;
+                font-family:sans-serif;
+                font-size:18px;
+                color:black;
+                opacity:0.5;
+                }
+            
              .h4{
                 position:fixed; left:985px; top:475px;
                 font-family:sans-serif;
@@ -62,7 +63,7 @@
                 opacity:1;
                 }
              .h7{
-                position:fixed; left:1140px; top:605px;
+                position:fixed; left:1230px; top:605px;
                 font-family:sans-serif;
                 font-size:18px;
                 color:#2ebc4f;
@@ -79,7 +80,7 @@
                 transition-duration:0.3s;
                 }
              .lien2{
-                position:fixed; left:60px; top:605px;
+                position:fixed; left:65px; top:605px;
                 font-family:sans-serif;
                 font-size:18px;
                 color:#2ebc4f;
@@ -102,6 +103,9 @@
                 opacity:1;
                 transition-duration:0.3s;
                 }
+             .lienvoip{
+                      color:#2ebc4f;
+                      }
              
              
              .creer{
@@ -121,27 +125,32 @@
                           transition-duration:0.3s;
                          }
                          
-             .im1{
+             .conteneur1{
+                 overflow:hidden;
+                 display:block;
                  height:450px;
                  width:450px;
                  border-radius:20px;
-                 opacity:0.2;
+                 opacity:1;
                  position:fixed; left:870px; top:80px;
-                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
                  }
-             .im2{
+             .conteneur3{
+                 display:block;
                  height:65px;
                  width:1366px;
-                 opacity:0.8;
+                 opacity:1;
                  position:fixed; left:0px; top:584px;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
                  }
-             .im3{
+             .conteneur2{
+                 display:inline;
                  height:450px;
                  width:830px;
                  border-radius:20px;
-                 opacity:0.2;
+                 opacity:1;
                  position:fixed; left:20px; top:80px;
-                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
                  }
              
              @keyframes im4 {
@@ -294,48 +303,62 @@
                         font-size:20px;
                         transition-duration:0.3s;
                         }
+                    
+            p{
+             position:fixed; left:95px; top:185px;
+             color:grey;
+             font-size:20px;
+             font-family:sans-serif;
+             opacity:1;
+             }
                         
         </style>
         </head>
         <body>
             
-            <div class="topnav"> </div>
+            <div class="topnav">
+                  <button class="creer" type="button">  <b> Créer un compte <b> </button>
+            </div>
             
-            <div class="h1">  Nom d'utilisateur ou adresse email </div>
-            <div class="h2">  Mot de passe  </div>
-            <div class="h3"> <strong> Se connecter sur </strong>  </div>
-            <div class="h4"> <strong> Mot de passe oublié ? </strong> </div>
             
-            <button class="creer" type="button">  <b> Créer un compte <b> </button>
+            <div class="conteneur1">
+                  <div class="h1"> <strong> Se connecter sur </strong>  </div>
+                  <img class=im5 src="Images/sslogo.png" alt="ss_logo"/>
+                  <div class="h2">  Nom d'utilisateur ou adresse email </div>
+                  <div class="h3">  Mot de passe  </div>
+                  <form>
+                        <input class="mail" type="mail" name="mail" >
+                        <input class="pass" type="password" name="pass" >
+                        <button class="login" type="submit" name="login"> <b> Se connecter </b> </button>
+                  </form>
+                  <div class="h4"> <strong> Mot de passe oublié ? </strong> </div>
+                  <a class="lien1" href="Forgotpass.html"> <strong> Cliquez ici. </strong> </a>
+            </div>
             
-            <img class=im1 src="Images/w.jpg" alt="white"/>
-            <img class=im2 src="Images/black.jpg" alt="black"/>
-            <img class=im3 src="Images/w.jpg" alt="white"/>
-            <img class=im4 src="Images/folder.png" alt="folder_logo"/>
-            <img class=im5 src="Images/sslogo.png" alt="ss_logo"/>
-            <img class=im6 src="Images/sslogo.png" alt="ss_logo"/>
-            <img class=im7 src="Images/sslogo.png" alt="ss_logo"/>
-            <img class=im8 src="Images/gmail.png" alt="gmail_logo"/>
-            <img class=im9 src="Images/fb.png" alt="facebook_logo"/>
-            <img class=im10 src="Images/tels.png" alt="telephone_logo"/>
-            <img class=im11 src="Images/github.png" alt="github_logo"/>
-            <img class=im12 src="Images/esti.png" alt="esti_logo"/>
-          
             
-            <div class="h5"> <strong> ambatoroka.f-society@gmail.com </strong> </div>
-            <div class="h6"> <strong> +261329903072 </strong> </div>
-            <div class="h7"> <strong> Sharedserver Copyright 2019 </strong> </div>
+            <div class="conteneur2">
+                   <img class=im6 src="Images/sslogo.png" alt="ss_logo"/>
+                   <p> Voulez-vous faciliter le partage de fichier dans votre entreprise ou dans votre société? <br> Vous êtes dans le bon endroit. Sharedserver est  une plateforme disponible en réseau <br> local et sur  mobile android qui permet de faire cela. Elle vous donne une expérience de<br> partage de fichier: fluide, rapide et sécurisé. Vous pouvez aussi discuter avec les <br> personnels dans votre entreprise ou société grâce au chat et <a class="lienvoip" href="https://fr.wikipedia.org/wiki/Voix_sur_IP "> voix sur IP (VOIP) </a>. Sans<br> oublier que vous pouviez aussi stocker vos fichiers  personnels dans cette plateforme <br>sans problème. En effet, Sharedserver se focalise sur ces trois principes suivants:
+                   </p>      
+            </div>
             
-            <form>
-                  <input class="mail" type="mail" name="mail" >
-                  <input class="pass" type="password" name="pass" >
-                  <button class="login" type="submit" name="login"> <b> Se connecter </b> </button>
-            </form>
             
-            <a class="lien1" href="Forgotpass.html"> <strong> Cliquez ici. </strong> </a>
-            <a class="lien2" href="us?.html"> <strong> Qui sommes-nous? </strong> </a>
-            <a class="lien3" href="https://github.com/gaetan1903/Shared-Server"> <strong> Code source </strong> </a>
-            <a class="lien4" href="facebook"> <strong> Shared-server </strong> </a>
+            <div class="conteneur3">
+                  <img class=im2 src="Images/w.jpg" alt="black"/>
+                  <img class=im4 src="Images/folder.png" alt="folder_logo"/>
+                  <img class=im7 src="Images/sslogo.png" alt="ss_logo"/>
+                  <img class=im8 src="Images/gmail.png" alt="gmail_logo"/>
+                  <img class=im9 src="Images/fb.png" alt="facebook_logo"/>
+                  <img class=im10 src="Images/tels.png" alt="telephone_logo"/>
+                  <img class=im11 src="Images/github.png" alt="github_logo"/>
+                  <img class=im12 src="Images/esti.png" alt="esti_logo"/>
+                  <div class="h5"> <strong> ambatoroka.f-society@gmail.com </strong> </div>
+                  <div class="h6"> <strong> +261329903072 </strong> </div>
+                  <div class="h7"> <strong> Copyright 2019 </strong> </div>
+                  <a class="lien2" href="us?.html"> <strong> Qui sommes-nous? </strong> </a>
+                  <a class="lien3" href="https://github.com/gaetan1903/Shared-Server"> <strong> SharedServer source </strong> </a>
+                  <a class="lien4" href="facebook"> <strong> Shared-server </strong> </a>
+            </div>
             
         </body>
     </html>          
