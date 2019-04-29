@@ -211,7 +211,27 @@
                		  height:52px;
                           transition-duration:0.3s;
                          }
-               
+                        
+             @media only screen and (max-width: 600px) {
+                                                                                           body{background-color:red;}
+                                                                                           }
+             @media only screen and (min-width: 600px) {
+                                                                                           body{background-color:green;}
+                                                                                           }
+             @media only screen and (min-width: 768px) {
+                                                                                           body{background-color:orange;}
+                                                                                           }
+             @media only screen and (min-width: 992px) {
+                                                                                           body{background-color:grey;}
+                                                                                           }
+             @media only screen and (min-width: 1200px) {
+                                                                                           body{background-color:teal;}
+                                                                                           }
+                                                                                           
+                                                                                           
+                                                                                           
+                                                                                           
+                                                                                      
              
               
         </style>
@@ -220,7 +240,7 @@
         <body>
         
        
-        <div class="conteneur1" >
+        <div class="conteneur1"  class="container container-50">
         	<p class="insc"> Inscrivez-vous gratuitement et profitez pleinement de nos services. </p>
         	<svg class="ligne" height="5" width= "500">
                 	<line x1="90" y1="0" x2="500" y2="0" stroke= "#ff6600" stroke-width="5" stroke-opacity="1" />
@@ -231,7 +251,7 @@
         
         <div class="creation" >
         	<form class="frm">
-                        <div class="nomu"> <div class="pnom_u">  Nom d'utilisateur : </div>    <input class="bnom_u" type="text" name="" > </div>
+                        <div class="nomu"> <div class="pnom_u">  Nom d'utilisateur : </div>    <input class="bnom_u" type="text" name=""  requied> </div>
                         <div class="nom"> <div class="pnom">  Nom : </div> <input class="bnom" type="text" name="" > </div>
                         <div class="prenom"> <div class="pprenom">  Prénom(s) : </div>   <input class="bprenom" type="text" name="" > </div>
                         <div class="mail"> <div class="pmail">  Adresse email : </div>     <input class="bmail" type="mail" name="" > </div>
