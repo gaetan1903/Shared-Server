@@ -6,7 +6,7 @@
               <meta name="viewport" content="width=device-width, initial-scale=1">
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	      <title>Site vitrine</title>
+	      <title>Shared-server</title>
 	</head>
 	<style>
 	      
@@ -86,8 +86,15 @@
 	         .lienvoip:hover{
 	         			   color:#ff0066;
 	         			   }
+	         
+	         .boutons{
+	         		 position:relative; margin-left:32%; margin-top:3%;
+	         		 }
 	         .btn-outline-info{
-	       		    position:relative; margin-left:38%;margin-top:2%;transition-duration:1s; padding:14px;
+	       		transition-duration:1s; padding:14px;display:inline;
+	       		    }
+	         .btn-outline-danger{
+	       		transition-duration:1s; padding:14px;display:inline; color:#ff0066; border-color:#ff0066; position:relative; margin-left:2% 
 	       		    }
 	
 	</style>
@@ -113,7 +120,9 @@
             	</div>
             	
             	<div>
-            		<button type="button" class="btn btn-outline-info">S'inscrire gratuitement maintenant</button>
+            		<div class="boutons"> <button type="button" class="btn btn-outline-info">Se connecter</button> <button type="button" class="btn btn-outline-danger">S'inscrire gratuitement maintenant</button>
+            		</div>
+            		
             	</div>
 		
 		
