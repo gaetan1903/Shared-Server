@@ -5,7 +5,7 @@
 	      <link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
               <meta name="viewport" content="width=device-width, initial-scale=1">
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <title>Shared-server</title>
 	</head>
 	<style>
@@ -22,8 +22,8 @@
                    height:25%;
                    width:100%;
                    position:fixed; left:0%; top:0%;
-                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-                   opacity:0.5;
+                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+                   opacity:0.9;
                    z-index:1000;
                    }
                    
@@ -68,12 +68,54 @@
 						transition-duration:0.3s;
 						}
 						
+		.conteneur1{
+				   display:block;
+				   width:55%;
+				   position:relative; margin-left:22%; margin-top:3%;
+				   }
+	         p{
+	       		font-size:18px;
+	       		color:white;
+	       		font-family:sans-serif;
+	       	   }
+	       	   
+	     
+	      .boutons{
+	       		        position:relative; margin-left:15%; margin-top:1%; 
+	       		        }   
+	      .btn-info{
+	       			transition-duration:1s; padding:14px;display:inline; border-radius:100px; padding: 80px 21px;
+	       		    }
+	      .btn-success{
+	       			transition-duration:1s; padding:14px;display:inline; border-radius:100px; padding: 80px 22px;   position:relative; margin-left:2%; margin-top:5%;
+	       		    }
+	      .btn-warning{
+	       			transition-duration:1s; padding:14px;display:inline; border-radius:100px; padding: 80px 40px; background-color:#ff6600; 
+	       			border-color:#ff6600;color:white;  position:relative; margin-left:2%; opacity:0.8;
+	       		    }
+	      .btn-warning:hover{
+	      			    background-color:#ff6600; 
+	       			    border-color:#ff6600;color:white;  position:relative; margin-left:2%; 
+	       			    }
+	      .btn-danger{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:200px; padding: 100px 37px; position:relative; margin-left:2%; margin-top:1%;
+	       		    }
 	</style>
+	
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+	
+	
+	
 	<body>
 		
 		 <div class="topnav" class="col-sm-6 col-md-4 col-lg-2">
                 </div>
                 
+               
                 <div class="nav">
   			<a href="shared-server.html">Accueil</a>
   			<a class="active" href="fonction.html">Fonctionnalités</a>
@@ -81,6 +123,20 @@
   			<a href="membre.html">Membres</a>
   			<a href="contact.html"> Nous contacter </a>
 		</div>
+		
+		
+		 <div class="conteneur1" class="col-sm-6 col-md-4 col-lg-2">
+                   	<p> 
+                   		Shared-server a quatre fonctionnalités principales sans compter comme  la création de goupe de partage dans le plateforme. Shared-server est donc un plateforme multifonctionnel capable de gérer des fichiers et des échanges d'informations.
+                   	</p>      
+            	</div>
+            	
+            	<div class="boutons">
+            		<button type="button" class="btn btn-info" title="Stockez vos fichiers personnels dans notre serveur avec sécurité. "> Stockage de fichiers</button>
+            		<button type="button" class="btn btn-success" data-toggle="tooltip" title="Partagez  vos fichiers personnels avec vos collègues de travail ou dans votre groupe de travail.">Partage de fichiers</button>
+            		<button type="button" class="btn btn-warning"  data-toggle="tooltip" title="Discutez avec vos collègues pour faciliter les échanges d'informations.">Chat et Appel</button>
+            		<button type="button" class="btn btn-danger" data-toggle="tooltip" title="Vous pouvez aussi utliser l'application mobile Shared-server sur votre Smartphone android.">Doter d'une application <br> mobile</button>
+            	</div>
 		
 		
 	
