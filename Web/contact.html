@@ -3,6 +3,7 @@
 	<head>
 	      <meta charset="utf-8" />
 	      <link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
+	      <link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
               <meta name="viewport" content="width=device-width, initial-scale=1">
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,36 +12,27 @@
 	<style>
 	      
 	      body{
-	      	       /*background-image:url("Images/server3.jpg"); */
+	      	       background-image:url("Images/po3.jpg");
 	      	       background-size:cover;
 	      	       background-attachment:fixed;
-	      	       background-color:#333;
 	      	       }
 	      	       
-	      .topnav{    
-                   background-color: teal;
-                   height:25%;
-                   width:100%;
-                   position:fixed; left:0%; top:0%;
-                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-                   opacity:1;
-                   z-index:1000;
-                   }
-                   
-           
-             			
-             /* Add a black background color to the top navigation */
-		.nav {
+	      	       
+	                  /* Add a black background color to the top navigation */
+		.topnav {
   				overflow: hidden;
-  				position:relative; margin-left:25%; margin-top:13%;
+  				position:fixed; left:0%; top:0%;
+  				opacity:1;
+  				z-index:1;
+  				width:100%;
 			}
 
 /* Style the links inside the navigation bar */
-		.nav a {
+		.topnav a {
  				float: left;
-  				color: #f2f2f2;
+  				color: white;
   				text-align: center;
-  				padding: 8px 16px;
+  				padding: 18px 25px;
   				text-decoration: none;
   				font-size: 17px;
   				transition-duration:0.3s;
@@ -48,26 +40,20 @@
 			}
 
 /* Change the color of links on hover */
-		.nav a:hover {
+		.topnav a:hover {
   			color: white;
-  			background-color:#ff6600;
-  			border-radius:5px;
+  			background-color:#2ebc4f;
   			transition-duration:0.3s;
 					}
 
 /* Add a color to the active/current link */
-		.nav a.active {
-  			background-color:#ff0066;
+		.topnav a.active {
+  			background-color:#2ebc4f;
  			color: white;
- 			border-radius:5px;
  			transition-duration:0.3s;
  			font-family:sans-serif;
 					}
-		.nav a.active:hover{
-						padding:10px 18px;
-						transition-duration:0.3s;
-						}
-						
+	      	       
 		.pn{
 	             position:fixed; margin-left:8%; margin-top:5%;
 	             }
@@ -88,6 +74,7 @@
        					margin: 0 auto;
         				padding: 40px 0;
         				margin-left:28.5%;
+        				position:relative; margin-top:70px;
     					}
    		 .contact-form form {
         				background: #fff;
@@ -109,13 +96,13 @@
 					  outline: none;
     					}
    		 .contact-form .btn {
-       					 background: #a177ff;
+       					 background: #2ebc4f;
 					font-size: 16px;
 					min-height: 50px;
 					border: none;
     						}
     		  .contact-form .btn:hover, .contact-form .btn:focus {
-       					 background: #8048ff;
+       					 background: #2ebc4f;
 					 outline: none;
    						 }
 		  .contact-form .btn i {
@@ -135,19 +122,14 @@
         			opacity: 1;
    				 }
    		.cont{
-   			color:#8048ff;
+   			color:#2ebc4f;
    			}
 						
 	</style>
 	<body>
 		
-		 <div class="topnav" class="col-sm-6 col-md-4 col-lg-2">
-		 	 <div class="pn">
-		 	   	<a href="membre.html"> <span class="carousel-control-prev-icon"></span> </a>
-		 	   </div>
-                </div>
                 
-                <div class="nav">
+                <div class="topnav" class="col-sm-6 col-md-4 col-lg-2">
   			<a href="shared-server.html">Accueil</a>
   			<a  href="fonction.html">Fonctionnalités</a>
   			<a  href="gallery.html">Gallerie</a>
@@ -155,21 +137,22 @@
   			<a class="active"href="contact.html"> Nous contacter </a>
 		</div>
 		
-<div class="contact-form">
+
+<div class="contact-form" class="col-sm-6 col-md-4 col-lg-2">
 	<form method="post">
         	<h1 class="cont">Contactez-nous</h1>
 		<p class="hint-text">Nous aimerions avoir de vos nouvelles, n'hésitez pas à nous contacter si vous avez des questions concernant nos produits ou services.</p>
 		<div class="form-group">
 			<label for="inputName">Name</label>
-			<input type="text" class="form-control" id="inputName" required>
+			<input type="text" class="form-control" id="inputName" name="" required>
 		</div>
 		<div class="form-group">
 			<label for="inputEmail">Email Address</label>
-			<input type="email" class="form-control" id="inputEmail" required>
+			<input type="email" class="form-control" id="inputEmail"  name="" required>
 		</div>
 		<div class="form-group">
 			<label for="inputMessage">Message</label>
-			<textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+			<textarea class="form-control" id="inputMessage" rows="5"  name="" required></textarea>
 		</div>
 		<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-paper-plane"></i> Send Message</button>
 	</form>
