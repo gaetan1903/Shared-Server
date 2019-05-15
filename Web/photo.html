@@ -13,9 +13,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
-	body{
-		background: #eeeeee;
-	}
+	  body{
+	      	       background-image:url("Images/po4.jpg");
+	      	       opacity:1;
+	      	       background-size:cover;
+	      	       height:5%;
+	      	       background-repeat:no-repeat;
+	      	       background-attachment:fixed;
+	      	       background-color:white;
+	      	       }
     .form-inline {
         display: inline-block;
     }
@@ -23,10 +29,11 @@
 		padding: 0 !important;
 	}	
 	.navbar {		
-		background: #fff;
+		background: #2ebc4f;
+		border:none !important;
+		border-radius:0px;
 		padding-left: 16px;
 		padding-right: 16px;
-		border-bottom: 1px solid #d6d6d6;
 		box-shadow: 0 0 4px rgba(0,0,0,.1);
 	}
 	.nav-link img {
@@ -37,21 +44,11 @@
 		float: left;
 		margin-right: 10px;
 	}
-	.navbar .navbar-brand {
-		color: #555;
-		padding-left: 0;
-		padding-right: 50px;
-		font-family: 'Merienda One', sans-serif;
-	}
-	.navbar .navbar-brand i {
-		font-size: 20px;
-		margin-right: 5px;
-	}
 	.search-box {
         position: relative;
     }	
     .search-box input {
-		box-shadow: none;
+	box-shadow: none;
         padding-right: 35px;
         border-radius: 3px !important;
     }
@@ -63,11 +60,11 @@
         right: 0;
         z-index: 9;
         padding: 7px;
-		height: 100%;
+	height: 100%;
     }
     .search-box i {
         color: #a0a5b1;
-		font-size: 19px;
+	font-size: 19px;
     }
 	.navbar .nav-item i {
 		font-size: 18px;
@@ -81,11 +78,11 @@
 	}
 	.navbar .dropdown-menu {
 		border-radius: 1px;
-		border-color: #e5e5e5;
+		border-color: white;
 		box-shadow: 0 2px 8px rgba(0,0,0,.05);
 	}
 	.navbar .dropdown-menu li a {
-		color: #777;
+		color: #999;
 		padding: 8px 20px;
 		line-height: normal;
 	}
@@ -139,12 +136,21 @@
 			width: 100%;
 		}
 	}
+	
+	.off{
+	     color:white;}
+	.caret{
+		color:white;}
+	
+	.fa-bell-o{
+		color:white;}
+	.fa-envelope-o{
+		color:white;}
 </style>
 </head> 
 <body>
-<nav class="navbar navbar-default navbar-expand-xl navbar-light">
+<nav class="navbar navbar-default navbar-expand-xl">
 	<div class="navbar-header d-flex col">
-		<a class="navbar-brand" href="#"><i class="fa fa-cube"></i>Brand<b>Name</b></a>  		
 		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
 			<span class="navbar-toggler-icon"></span>
 			<span class="icon-bar"></span>
@@ -154,38 +160,22 @@
 	</div>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		<ul class="nav navbar-nav">
-			<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">About</a></li>
-			<li class="nav-item dropdown">
-				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
-				<ul class="dropdown-menu">					
-					<li><a href="#" class="dropdown-item">Web Design</a></li>
-					<li><a href="#" class="dropdown-item">Web Development</a></li>
-					<li><a href="#" class="dropdown-item">Graphic Design</a></li>
-					<li><a href="#" class="dropdown-item">Digital Marketing</a></li>
-				</ul>
-			</li>
-			<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-		</ul>
 		<form class="navbar-form form-inline">
 			<div class="input-group search-box">								
-				<input type="text" id="search" class="form-control" placeholder="Search by Name">
+				<input type="text" id="search" class="form-control" placeholder="Rechercher ici">
 				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
 			</div>
 		</form>
 		<ul class="nav navbar-nav navbar-right ml-auto">
-			<li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">1</span></a></li>
-			<li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">10</span></a></li>
+			<li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
+			<li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">-5</span></a></li>
 			<li class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg" class="avatar" alt="Avatar"> Paula Wilson <b class="caret"></b></a>
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="Images/off.jpg" class="avatar" alt="Avatar"> <b class="off"> Offman075  </b><b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
-					<li><a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></li>
-					<li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
+					<li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Langues</a></li>
 					<li class="divider dropdown-divider"></li>
-					<li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
+					<li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Déconnexion</a></li>
 				</ul>
 			</li>
 		</ul>
