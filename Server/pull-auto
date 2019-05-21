@@ -1,0 +1,9 @@
+#!/bin/bash
+while true
+do
+cd /var/www/html/Shared-Server-1 && git pull
+cp -r /var/www/html/Shared-Server-1/Web/* /var/www/html/
+mv /var/www/html/shared-server.html /var/www/html/index.html
+sleep 60
+done
+

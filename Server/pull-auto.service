@@ -1,0 +1,4 @@
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/libexec/pull-auto start
