@@ -1,4 +1,5 @@
 [Service]
 Type=oneshot
-RemainAfterExit=no
-ExecStart=/usr/libexec/pull-auto start
+RemainAfterExit=yes
+ExecStart=/var/www/html/Shared-Server-1/Server/pull-auto start
+ExecStop=/var/www/html/Shared-Server-1/Server/pull-auto stop
