@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
 <title>Shared-Server</title>
 <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -29,7 +30,7 @@
 		padding: 0 !important;
 	}	
 	.navbar {		
-		background: #032f62;
+		background: white;
 		border:none !important;
 		border-radius:0px;
 		padding-left: 16px;
@@ -53,9 +54,9 @@
         border-radius: 3px !important;
     }
 	.search-box .input-group-addon {
-        min-width: 35px;
+        min-width: 50px;
         border: none;
-        background: transparent;
+        background: #2ebc4f;
         position: absolute;
         right: 0;
         z-index: 9;
@@ -63,7 +64,7 @@
 	height: 100%;
     }
     .search-box i {
-        color: #a0a5b1;
+        color: white;
 	font-size: 19px;
     }
 	.navbar .nav-item i {
@@ -138,29 +139,27 @@
 	}
 	
 	.off{
-	     color:white;}
+	     color:#777;}
 	.caret{
-		color:white;}
+		color:#777;}
 	
 	.fa-bell-o{
-		color:white;}
+		color:#777;}
 	.fa-envelope-o{
-		color:white;}
+		color:#777;}
+	.im{height:40px;}
+	.form-control{
+				min-width:850px;
+				}
+	
 </style>
 </head> 
 <body>
 <nav class="navbar navbar-default navbar-expand-xl">
-	<div class="navbar-header d-flex col">
-		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-			<span class="navbar-toggler-icon"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-	</div>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 		<form class="navbar-form form-inline">
+			<img class="im" src="Images/logos.png">
 			<div class="input-group search-box">								
 				<input type="text" id="search" class="form-control" placeholder="Rechercher ici">
 				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
@@ -168,7 +167,7 @@
 		</form>
 		<ul class="nav navbar-nav navbar-right ml-auto">
 			<li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
-			<li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">-5</span></a></li>
+			<li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">10</span></a></li>
 			<li class="nav-item dropdown">
 				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="Images/off.jpg" class="avatar" alt="Avatar"> <b class="off"> Offman075  </b><b class="caret"></b></a>
 				<ul class="dropdown-menu">
