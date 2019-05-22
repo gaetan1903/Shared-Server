@@ -95,22 +95,22 @@
 	         			   }
 	         
 	         .boutons{
-	         		 position:relative; margin-left:34%; margin-top:4%;
+	         		 position:relative; margin-left:33%; margin-top:4%;
 	         		 }
-	         .btn-success{
-	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px; background-color:#2ebc4f;
+	         .btn-outline-info{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#2ebc4f;color:white; border-color:#2ebc4f;
 	       		    }
-	        .btn-success:hover{
-	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#ff6600; border-color:#ff6600;
+	        .btn-outline-info:hover{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#2ebc4f;color:white; border-color:#2ebc4f;
 	       		    }
 	          
-	       .btn-outline-success{
-	       		transition-duration:1s; padding:14px;display:inline; color:#2ebc4f; border-color:#2ebc4f;background-color:none; position:relative; 
-	       		margin-left:2%; border-radius:100px;
+	       .btn-outline-danger{
+	       		transition-duration:1s; padding:14px;display:inline; color:#2ebc4f; border-color:#2ebc4f; position:relative; margin-left:2%; border-radius:100px;
 	       		    }
-	        .btn-outline-success:hover{
-	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;color:white;
+	        .btn-outline-danger:hover{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#2ebc4f;color:white; border-color:#2ebc4f;
 	       		    }
+	       		    
 	          .pn{
 	             position:fixed; margin-left:8%; margin-top:5%;
 	             }
@@ -217,8 +217,8 @@
             	
             
             	<div class="boutons" class="col-sm-6 col-md-4 col-lg-2"> 
-            		<button type="button" class="btn btn-success" href="#myModal"  data-toggle="modal" >Se connecter</button> 
-            		<button onclick='window.location="create.php"' type="button" class="btn btn-outline-success">S'inscrire gratuitement maintenant</button>
+            		<button type="button" class="btn btn-outline-info" href="#myModal"  data-toggle="modal" >Se connecter</button> 
+            		<button onclick='window.location="create.php"' type="button" class="btn btn-outline-danger">S'inscrire gratuitement maintenant</button>
             	</div>
 
             	
