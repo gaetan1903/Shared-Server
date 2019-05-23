@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
+$bdd = new PDO('mysql:host=192.168.150.119;dbname=sshared','root','__sshared__!!') or die("not connect");
 
 
 
@@ -22,7 +22,7 @@ if(isset($_POST['s_inscrire']))
       {
 
 
-        $reta = $bdd->prepare("SELECT * FROM membre WHERE mail = ? ");
+        $reta = $bdd->prepare("SELECT * FROM membre WHERE email = ? ");
         $reta -> execute(array($mail));
         $exis = $reta -> rowCount(); 
         if($exis == 0)
@@ -41,7 +41,7 @@ if(isset($_POST['s_inscrire']))
             	{ 
             		$key .= mt_rand(0,9);
             	}
-              $insertmbr = $bdd -> prepare(" INSERT INTO membre(user_name,mail,mdp,confirm_mail,ver) VALUES ('$user_name', '$mail', '$mdp','$key','$init') ");
+              $insertmbr = $bdd -> prepare(" INSERT INTO membre(user_name,email,mdp,confirm_mail,ver) VALUES ('$user_name', '$mail', '$mdp','$key','$init') ");
               $insertmbr -> execute(array($user_name, $mail, $mdp,$key,$init));
 
 
