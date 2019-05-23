@@ -1,9 +1,9 @@
 <?php
 $bdd = new PDO('mysql:host=192.168.150.119;dbname=sshared','root','__sshared__!!') or die("not connect");
 
+echo 'offman';
 
-
-
+/*
 if(isset($_POST['s_inscrire']))
 {
 
@@ -85,7 +85,7 @@ if(isset($_POST['s_inscrire']))
       }
     }
 
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
