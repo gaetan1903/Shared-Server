@@ -1,6 +1,5 @@
 <?php
-$code = "__sshared__!!";
-$bdd = new PDO('mysql:host=192.168.150.119;dbname=sshared','root','$code') or die("not connect");
+$bdd = new PDO('mysql:host=192.168.150.119;dbname=sshared','root','__sshared__!!') or die("not connect");
 
 
 
