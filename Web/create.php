@@ -1,7 +1,7 @@
 <?php
-
-$bdd = new PDO('mysql:host=shared-server.esti.mg;dbname=sshared','root','__sshared__!!') or die("not connect");
 /*
+$bdd = new PDO('mysql:host=;dbname=sshared','root','') or die("not connect");
+
 echo 'offman';
 
 
