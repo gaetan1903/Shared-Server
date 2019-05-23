@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
+$bdd = new PDO('mysql:host=localhost;dbname=test','root','') or die("not connect");
 if(isset($_POST['se_connecter']))
 {
     $connectmail = htmlspecialchars($_POST['connectmail']);
