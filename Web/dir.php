@@ -1,7 +1,6 @@
 <?php
 session_start();
-$cod = "__sshared__!!"
-$bdd = new PDO('mysql:host=192.168.150.119;dbname=sshared','root','$cod') or die("not connect");
+$bdd = new PDO('mysql:host=localhost;dbname=sshared','root','') or die("not connect");
 if(isset($_POST['se_connecter']))
 {
     $connectmail = htmlspecialchars($_POST['connectmail']);
