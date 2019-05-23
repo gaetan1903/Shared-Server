@@ -1,6 +1,6 @@
 <?php
-/*
-$bdd = new PDO('mysql:host=localhost;dbname=sshared','root','') or die("not connect");
+$code = "__sshared__!!";
+$bdd = new PDO('mysql:host=192.168.150.119;dbname=sshared','root','$code') or die("not connect");
 
 
 
@@ -86,11 +86,7 @@ if(isset($_POST['s_inscrire']))
       }
     }
 
-}
 
-
-
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
