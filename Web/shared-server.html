@@ -1,4 +1,9 @@
+<?php
+	session_start();
 
+	$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
+	
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,7 +16,7 @@
 	      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	      <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	      <title>Shared-server</title>
 	</head>
 	<style>
@@ -200,6 +205,7 @@
   			<a href="gallery.html">Gallerie</a>
   			<a href="membre.html">Membres</a>
   			<a href="contact.html"> Nous contacter </a>
+  			<a href="downapp.html"> Télécharger </a>
 		</div>
 		
 		
@@ -238,7 +244,12 @@
 						<div class="form-group">
 							<input type="submit" class="btn btn-primary btn-block btn-lg" name="se_connecter" value="Login">
 						</div>
-
+						<?php
+						if(isset($erreur))
+						{
+							echo '<font color="red">'.$erreur."</font>";
+						}
+						?>
 					</form>				
 					<div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
 				</div>

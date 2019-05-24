@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=sshared','root','') or die("not connect");
+$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
 if (isset($_GET['id']) AND ($_GET['id']) > 0) 
 {
 	$getid = intval($_GET['id']);

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-#  arg1 = fichier
-#  arg2 = nom group 
-#  arg3 = nom user 
-
-mv /home/$2/$1 /var/www/html/server/$1 
-delay(3600)
-rm /var/www/html/server/$1
