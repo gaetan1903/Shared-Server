@@ -7,6 +7,7 @@
               <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
               <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	      <title>Télécharger</title>
 	</head>
 	<style>
@@ -56,17 +57,18 @@
 		.conteneur1{
 				   display:block;
 				   width:60%;
-				   position:relative; margin-left:19%; margin-top:130px;
+				   height:50%;
+				   position:relative; margin-left:19%; margin-top:135px;
 				   background-color:white;
-				   border-radius:10px;
+				   border-radius:5px;
 				   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 				   }
 				   
 		 h1{
-		    	color:#2ebc4f;
+		    	color:#ff6600;
 		    	font-family:sans-serif;
-		    	font-size:25px;
-		   	position:relative; margin-left:22%; padding-top:3%;}
+		    	font-size:20px;
+		   	position:relative; margin-left:28%; padding-top:3%;}
 	         p{
 	       		font-size:16px;
 	       		color:#333;
@@ -79,13 +81,33 @@
 	         .lienvoip:hover{
 	         			   color:#333;
 	         			   }
+	         
+	         
+	         .boutons{
+	         		display:block;
+	         		position:relative; margin-left:24.5%;margin-top:6%;margin-bottom:5%;}			  
+	         .btn {
+  				background-color: #ff6600;
+  				display:inline;
+ 			 	border: none;
+  				color: white;
+  				padding: 12px;
+  				cursor: pointer;
+  				font-size: 16px;
+  				border-radius:25px;
+  				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+			}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #032f62;
+  color:white;
+}
 				
 				
 		</style>
 		<body>
 		
-                
-               
                 <div class="topnav">
   			<a href="shared-server.html">Accueil</a>
   			<a href="fonction.html">Fonctionnalités</a>
@@ -98,7 +120,11 @@
 		 <div class="conteneur1" class="col-sm-6 col-md-4 col-lg-2">
                    	<h1> TELECHARGEMENT DE LOGICIEL</h1>
                    	<p> Pour faciliter l'utilisation de notre plateforme, nous avons créé un petit programme. Ce programme vous permettra d'accéder dans les dossiers de votre groupe à partir de votre explorateur de fichier en tapant simplement votre nom d'utilisateur et votre mot de passe. Ainsi, vous pouvez partagez et recevoir des fichiers sans vous rendre sur notre site web. A noter que cette fonctionnalité nécessite quand-même une connexion internet. Le programme est crossplateforme, elle peut donc fonctionner aussi bien sous windows que sous Linux. <br>Cliquez <a class="lienvoip" href="programme.html"> ici </a> pour voir les apperçus.
-                   	</p>      
+                   	</p>
+                   	<div class="boutons">
+                   		<button class="btn"><i class="fa fa-download"></i> Télécharger(Linux)</button>
+                   		<button class="btn"><i class="fa fa-download"></i> Télécharger(Windows)</button>
+                   	</div>      
             	</div>
             	
 	
