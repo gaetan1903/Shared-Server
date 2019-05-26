@@ -7,7 +7,7 @@ if (isset($_SESSION["id"]))
 	$req = $bdd ->prepare("SELECT * FROM membre WHERE id = ? ");
 	$req ->execute(array($getid));
 	$userinfo = $req -> fetch();
-}
+
 
 $message = ""; 
 $user_name = $userinfo['user_name'];
@@ -119,4 +119,5 @@ if (isset($_POST["valid"]))
 
 }
 header("Location: test.php?id=".$_SESSION['id']);
+}
 ?>	
