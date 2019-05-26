@@ -269,40 +269,48 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
                         $description_file = $fichier['description_file'];
                         $destination = "Dossier/$user_name_connecter/$name_file";
                         $extension_a_down = strtolower(substr(strrchr($name_file, '.'), 1));
-                    
+							if(strlen($name_file)>32)
+							{
+								$name_file = str_replace('_', ' ', substr($name_file, 0, 28));
+								$name_file = "$name_file...";
+							}
+							if(strlen($name_file)<=19)
+							{
+								$name_file = substr($name_file, 0, 19);
+								$name_file = "$name_file <br/>";
+							}
                             if(in_array($extension_a_down, $extension_fic)){
                                 echo '<div id="desc_fic"><img class="media-object" src="fic_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_image)){
                                 echo '<div id="desc_fic"><img class="media-object" src="image_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_audio)){
                                 echo '<div id="desc_fic"><img class="media-object" src="audio_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_video)){
                                 echo '<div id="desc_fic"><img class="media-object" src="video_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             else{
                                 echo '<div id="desc_fic"><img class="media-object" src="autre_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             ?>
-                              
-                            
+                    
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading"><br/></h4>
