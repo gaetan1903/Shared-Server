@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
+	$bdd = new PDO('mysql:host=localhost;dbname=bdd_sserver','sserver','sserver') or die("not connect");
 	
 ?>
 <!DOCTYPE html>
@@ -233,7 +233,7 @@
                				 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form action="dir.php" method="post">
+					<form action="se_connecter.php" method="post">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Nom d'utilisateur ou adresse email" name="connectmail" >
 						</div>

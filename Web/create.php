@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
+$bdd = new PDO('mysql:host=localhost;dbname=bdd_sserver','sserver','sserver') or die("not connect");
 
 
 
@@ -44,6 +44,10 @@ if(isset($_POST['s_inscrire']))
               $insertmbr = $bdd -> prepare(" INSERT INTO membre(user_name,mail,mdp,confirm_mail,ver) VALUES ('$user_name', '$mail', '$mdp','$key','$init') ");
               $insertmbr -> execute(array($user_name, $mail, $mdp,$key,$init));
 
+							$connectio_ssh2 = ssh2_connect('localhost', 22);
+							ssh2_auth_password($connectio_ssh2, 'mm', 'azert');
+							ssh2_exec($connectio_ssh2, "mkdir /var/www/html/Web/Dossier/$user_name");
+
 
               $header = 'MIME-Version 1.0\r\n';
               $header = 'FROM:shared-server.est.mg<jean.offman.bienvenu@esti.mg>'."\n";
@@ -60,7 +64,7 @@ if(isset($_POST['s_inscrire']))
 
               mail($mail,"Confirmation de compte",$message, $header);
 
-              header("location:http://localhost/projet/Shared-Server-1/Web/shared-server.php");
+              header("location: shared-server.php");
 
               
             }
