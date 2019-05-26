@@ -2,10 +2,10 @@
 session_start();
 
 $bdd = new PDO('mysql:host=localhost;dbname=bdd_sserver','sserver','sserver') or die("not connect");
-if (isset($_GET['id']) AND ($_GET['id']) > 0) 
+if (isset($_SESSION['id']) AND ($_SESSION['id']) > 0) 
 {
 	
-	$getid = intval($_GET['id']);
+	$getid = intval($_SESSION['id']);
 	$req = $bdd ->prepare("SELECT * FROM membre WHERE id = ? ");
 	$req ->execute(array($getid));
 	$userinfo = $req -> fetch();
@@ -188,6 +188,7 @@ if (isset($_GET['id']) AND ($_GET['id']) > 0)
 </head> 
 <body>
 <?php
+$user_name_connecter=$userinfo['user_name'];
 if ($userinfo['id'] == $_SESSION['id']) 
 { 
 ?>
@@ -224,14 +225,14 @@ if ($userinfo['id'] == $_SESSION['id'])
 	</div>
 </nav>
 <?php 
-
+include("funct.php");
 $extension_fic = array('bat', 'doc', 'docx', 'exe', 'gz', 'odt', 'pps', 'ppt', 'rar', 'tar', 'xls', 'xlsx', 'zip', 
 'XML', 'sh', 'h', 'py', 'odp', 'ods', 'odg', 'pdf', 'txt', 'php', 'html');
 $extension_image = array('bmp', 'gif', 'iso', 'jpeg', 'jpg', 'png', 'eps', 'psd', 'psp', 'tif', 'tiff');
 $extension_audio = array('aac', 'mp3', 'wav', 'mid', 'AAC', 'aac');
 $extension_video = array('avi', 'mkv', 'mov', 'mpg', 'qt', 'ra', 'ram', 'mp4', 'wmv', );
 
-$fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, description_file from file WHERE user_name=$user_name_connecter");
+$fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, description_file from file where user_name LIKE '$user_name_connecter'");
 ?>
 
 <div class="container-fluid">
@@ -260,18 +261,15 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
                     <div class="media">
                         <div class="media-left">
 						<?php 
-						$user_name_connecter=$userinfo['user_name'];
+						
                         $name_file = $fichier['file_name'];
                         $user_file = $fichier['user_name'];
                         $groupe_file = $fichier['groupe_name'];
                         $date_upload_file = $fichier['date_upload'];
                         $description_file = $fichier['description_file'];
-                        $destination = "Dossier/$user_name_connecter/";
+                        $destination = "Dossier/$user_name_connecter/$name_file";
                         $extension_a_down = strtolower(substr(strrchr($name_file, '.'), 1));
                     
-                        ?>
-                          
-                            <?php 
                             if(in_array($extension_a_down, $extension_fic)){
                                 echo '<div id="desc_fic"><img class="media-object" src="fic_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
@@ -330,7 +328,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="insertion.php" method="post" enctype="multipart/form-data">
+				<form action="insertion.php" method="POST" enctype="multipart/form-data">
 					
 					<span class="fichier">Fichier :</span>
 						<input type="file"  name="fichier" /><br /><br />
