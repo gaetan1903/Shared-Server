@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
+    
+    <link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
     <link href="http://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" >
@@ -14,164 +15,84 @@
     <link href="css/fileinput.min.css" rel="stylesheet" type="text/css">
     <link href="css/superlist.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
     
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
 
-    <title>Superlist - User Profile Edit</title>
+    <title>Profile</title>
 </head>
 
+<style>
+	.user-photo{
+			     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+			     border-color:white;
+			     border-radius:10px;
+			     }
+	.btn-primary{
+			     background-color:#2ebc4f;
+			     border-radius:15px;
+			     transition-duration:0.1s;
+			     font-size:15px;
+			     }
+	.btn-primary:hover{
+			     background-color:#ff6600 !important;
+			     }
+	.backgroun-white{
+				       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+				       }
+	
+	.active{
+		   background-color:#ff6600 !important;
+		   border-radius:20px;}
+	
+	.form-control{
+			       border-radius:20px;
+			       border-width:0.5px;
+			       border-color:#999;
+			       opacity:0.8;
+			       }
+	.form-control:hover{
+				          border-color:#2ebc4f;}
+				          
+	.background-white{
+					border-radius:10px;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);}
+	h1{
+		color:#ff6600 !important;
+		font-family:sans-serif;
+		font-size:25px !important;}
+	
+	h3{
+            font-family:sans-serif;}
+		
+	.menu-advanced{
+				    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+				    border-radius:10px;
+				    }
+				    
+	.fa-pencil{
+			color:#2ebc4f;
+			}
+	.fa-pencil:hover{
+			color:#ff6600;
+			}
+			
+	.topnav{
+		      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+		      background-color: #2ebc4f;
+		      height:10%;
+		      position:relative;
+		      }
+	
+</style>
 
-<body class="">
+<body >
+
+<div class="topnav">
+</div>
 
 <div class="page-wrapper">
-    
-    <header class="header">
-    <div class="header-wrapper">
-        <div class="container">
-            <div class="header-inner">
-                <div class="header-logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo.png" alt="Logo">
-                        <span>Superlist</span>
-                    </a>
-                </div><!-- /.header-logo -->
-
-                <div class="header-content">
-                    <div class="header-bottom">
-                        <div class="header-action">
-                            <a href="listing-submit.html" class="header-action-inner" title="Add Listing" data-toggle="tooltip" data-placement="bottom">
-                                <i class="fa fa-plus"></i>
-                            </a><!-- /.header-action-inner -->
-                        </div><!-- /.header-action -->
-
-                        <ul class="header-nav-primary nav nav-pills collapse navbar-collapse">
-    <li >
-        <a href="#">Home <i class="fa fa-chevron-down"></i></a>
-
-        <ul class="sub-menu">
-            <li><a href="index-video.html">Video v1</a></li>
-            <li><a href="index-video-transparent-header.html">Video v2</a></li>
-            <li><a href="index-google-map.html">Google Map V1</a></li>
-            <li><a href="index-google-map-transparent-header.html">Google Map v2</a></li>
-            <li><a href="index-image.html">Image v1</a></li>
-            <li><a href="index.html">Image v2</a></li>
-            <li><a href="index-bootstrap-slider.html">Boxed Slider</a></li>
-        </ul>
-    </li>
-
-    <li >
-        <a href="#">Listing <i class="fa fa-chevron-down"></i></a>
-
-        <ul class="sub-menu">
-            <li><a href="listing-detail.html">Detail</a></li>
-            <li><a href="listing-map.html">Row + Map</a></li>
-            <li><a href="listing-grid.html">Grid</a></li>
-            <li><a href="listing-grid-sidebar.html">Grid Sidebar</a></li>
-            <li><a href="listing-row.html">Row</a></li>
-            <li><a href="listing-row-sidebar.html">Row Sidebar</a></li>
-        </ul>
-    </li>
-
-    <li class="has-mega-menu active">
-        <a href="#">Pages <i class="fa fa-chevron-down"></i></a>
-
-        <ul class="mega-menu">
-            <li>
-                <a href="#">General</a>
-
-                <ul>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="invoice.html">Invoice</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="grid.html">Grid System</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">User Account</a>
-
-                <ul>
-                    <li><a href="user-profile-edit.html">Profile Edit</a></li>
-                    <li><a href="login.html">Login Form</a></li>
-                    <li><a href="register.html">Register Form</a></li>
-                    <li><a href="change-password.html">Change Password Form</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">Miscellaneous</a>
-
-                <ul>
-                    <li><a href="sticky-footer.html">Sticky Footer</a></li>
-                    <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
-                    <li><a href="error-403.html">403 - Forbidden</a></li>
-                    <li><a href="error-404.html">404 - Not Found</a></li>
-                    <li><a href="error-500.html">500 - Internal Error</a></li>
-                </ul>
-            </li>
-
-            <li class="hidden-xs">
-                <div class="special">
-                    <a href="register.html">Sign Up Now</a>
-                </div><!-- /.special-->
-            </li>
-        </ul>
-    </li>
-
-    <li >
-        <a href="#">Blog <i class="fa fa-chevron-down"></i></a>
-
-        <ul class="sub-menu">
-            <li><a href="blog-standard-right-sidebar.html">Standard Right Sidebar</a></li>
-            <li><a href="blog-standard-left-sidebar.html">Standard Left Sidebar</a></li>
-            <li><a href="blog-boxed.html">Boxed Style</a></li>
-            <li><a href="blog-condensed.html">Condensed Style</a></li>
-            <li><a href="blog-detail.html">Detail Fullwidth</a></li>
-            <li><a href="blog-detail-right-sidebar.html">Detail Right Sidebar</a></li>
-            <li><a href="blog-detail-left-sidebar.html">Detail Left Sidebar</a></li>
-        </ul>
-    </li>
-
-    <li >
-        <a href="#">Admin <i class="fa fa-chevron-down"></i></a>
-
-        <ul class="sub-menu">
-            <li><a href="admin-dashboard.html">Dashboard</a></li>
-            <li><a href="admin-grid.html">Grid System</a></li>
-            <li><a href="admin-tables.html">Tables</a></li>
-            <li><a href="admin-forms.html">Forms</a></li>
-            <li><a href="admin-notifications.html">Notifications</a></li>
-        </ul>
-    </li>
-
-    <li >
-        <a href="#">Contact <i class="fa fa-chevron-down"></i></a>
-        <ul class="sub-menu">
-            <li><a href="contact-1.html">Contact v1</a></li>
-            <li><a href="contact-2.html">Contact v2</a></li>
-            <li><a href="contact-3.html">Contact v3</a></li>
-        </ul>
-    </li>
-</ul>
-
-<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".header-nav-primary">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-</button>
-
-                    </div><!-- /.header-bottom -->
-                </div><!-- /.header-content -->
-            </div><!-- /.header-inner -->
-        </div><!-- /.container -->
-    </div><!-- /.header-wrapper -->
-</header><!-- /.header -->
-
-
-
 
     <div class="main">
         <div class="main-inner">
@@ -182,8 +103,8 @@
                             <div class="widget">
     <div class="user-photo">
         <a href="#">
-            <img src="assets/img/tmp/agent-2.jpg" alt="User Photo">
-            <span class="user-photo-action">Click here to reupload</span>
+            <img src="Images/off.jpg" alt="User Photo">
+            <span class="user-photo-action">Changer votre avatar</span>
         </a>
     </div><!-- /.user-photo -->
 </div><!-- /.widget -->
@@ -192,10 +113,8 @@
                             <div class="widget">
 
     <ul class="menu-advanced">
-        <li><a href="listing-submit.html"><i class="fa fa-pencil"></i> Submit Listing</a></li>
-        <li class="active"><a href="#"><i class="fa fa-user"></i> Edit Profile</a></li>
-        <li><a href="#"><i class="fa fa-key"></i> Password</a></li>
-        <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+        <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Editer le profile</a></li>
+        <li class="log"><a href="#"><i class="fa fa-sign-out"></i> Deconnexion</a></li>
     </ul>
 </div><!-- /.widget -->
 
@@ -205,132 +124,55 @@
                     <div class="col-sm-8 col-lg-9">
                         <div class="content">
                             <div class="page-title">
-    <h1>Edit Profile</h1>
+    <h1>Editer votre profile</h1>
 </div><!-- /.page-title -->
 
 <div class="background-white p20 mb30">
     <h3 class="page-title">
-        Contact Information
+        Information générale
 
-        <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
+        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer</a>
     </h3>
 
     <div class="row">
         <div class="form-group col-sm-6">
-            <label>Name</label>
-            <input type="text" class="form-control" value="John">
+            <label><b> Nom </b> <i class="fa fa-pencil"> </i> </label>
+            <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label>Surname</label>
-            <input type="text" class="form-control" value="Doe">
+            <label> <b> Prénom(s) <i class="fa fa-pencil"> </i> </b></label>
+            <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label>E-mail</label>
-            <input type="text" class="form-control" value="sample@example.com">
+            <label><b> E-mail <i class="fa fa-pencil"> </i> </label>
+            <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label>Phone</label>
-            <input type="text" class="form-control" value="123-456-789">
+            <label> <b>Téléphone <i class="fa fa-pencil"> </i> </label>
+            <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
     </div><!-- /.row -->
 </div>
 
-<div class="background-white p20 mb30">
-    <h3 class="page-title">
-        Social Connections
-
-        <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
-    </h3>
-
-    <div class="form-horizontal">
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Facebook</label>
-
-            <div class="col-sm-9">
-                <input type="text" class="form-control" value="http://facebook.com/">
-            </div><!-- /.col-* -->
-        </div><!-- /.form-group -->
-
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Twitter</label>
-
-            <div class="col-sm-9">
-                <input type="text" class="form-control" value="http://twitter.com/">
-            </div><!-- /.col-* -->
-        </div><!-- /.form-group -->
-
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Linkedin</label>
-
-            <div class="col-sm-9">
-                <input type="text" class="form-control" value="http://linkedin.com/">
-            </div><!-- /.col-* -->
-        </div><!-- /.form-group -->
-
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Dribbble</label>
-
-            <div class="col-sm-9">
-                <input type="text" class="form-control" value="http://dribbble.com/">
-            </div><!-- /.col-* -->
-        </div><!-- /.form-group -->
-
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Instagram</label>
-
-            <div class="col-sm-9">
-                <input type="text" class="form-control" value="http://instagram.com/">
-            </div><!-- /.col-* -->
-        </div><!-- /.form-group -->
-    </div><!-- /.form-inline -->
-</div><!-- /.background-white -->
 
 <div class="background-white p20 mb30">
     <h3 class="page-title">
-        Address
+        Securité
 
-        <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
+        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer</a>
     </h3>
+     <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> <b> Mot de passe <i class="fa fa-pencil"> </i> </label>
 
-    <div class="row">
-        <div class="form-group col-sm-6">
-            <label>State</label>
-            <input type="text" class="form-control" value="New York">
+            <div class="col-sm-9">
+                <input type="password" class="form-control" value="">
+            </div><!-- /.col-* -->
         </div><!-- /.form-group -->
 
-        <div class="form-group col-sm-6">
-            <label>City</label>
-            <input type="text" class="form-control" value="New York City">
-        </div><!-- /.form-group -->
-
-        <div class="form-group col-sm-6">
-            <label>Street</label>
-            <input type="text" class="form-control" value="Everton Eve">
-        </div><!-- /.form-group -->
-
-        <div class="form-group col-sm-3">
-            <label>House Number</label>
-            <input type="text" class="form-control" value="123">
-        </div><!-- /.form-group -->
-
-        <div class="form-group col-sm-3">
-            <label>ZIP</label>
-            <input type="text" class="form-control" value="12345">
-        </div><!-- /.form-group -->
-    </div><!-- /.row -->
-</div>
-
-<div class="background-white p20 mb30">
-    <h3 class="page-title">
-        Biography
-
-        <a href="#" class="btn btn-primary btn-xs pull-right">Save</a>
-    </h3>
-
-    <textarea class="form-control" rows="7"></textarea>
 </div>
 
                         </div><!-- /.content -->
@@ -340,59 +182,8 @@
         </div><!-- /.main-inner -->
     </div><!-- /.main -->
 
-    <footer class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h2>About Superlist</h2>
 
-                    <p>Superlist is directory template built upon Bootstrap and SASS to bring great experience in creation of directory.</p>
-                </div><!-- /.col-* -->
 
-                <div class="col-sm-4">
-                    <h2>Contact Information</h2>
-
-                    <p>
-                        Your Street 123, Melbourne, Australia<br>
-                        +1-123-456-789, <a href="#">sample@example.com</a>
-                    </p>
-                </div><!-- /.col-* -->
-
-                <div class="col-sm-4">
-                    <h2>Stay Connected</h2>
-
-                    <ul class="social-links nav nav-pills">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                    </ul><!-- /.header-nav-social -->
-                </div><!-- /.col-* -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </div><!-- /.footer-top -->
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom-left">
-                &copy; 2015 All rights reserved. Created by <a href="#">Aviators</a>.
-            </div><!-- /.footer-bottom-left -->
-
-            <div class="footer-bottom-right">
-                <ul class="nav nav-pills">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
-                    <li><a href="contact-1.html">Contact</a></li>
-                </ul><!-- /.nav -->
-            </div><!-- /.footer-bottom-right -->
-        </div><!-- /.container -->
-    </div>
-</footer><!-- /.footer -->
 
 </div><!-- /.page-wrapper -->
 
