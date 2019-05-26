@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    
+    <link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
+    <link href="http://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" >
+    <link href="css/colorbox.css" rel="stylesheet" type="text/css" >
+    <link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+    <link href="css/fileinput.min.css" rel="stylesheet" type="text/css">
+    <link href="css/superlist.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Profile</title>
+</head>
+
+<style>
+	.user-photo{
+			     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+			     border-color:white;
+			     border-radius:10px;
+			     }
+	.btn-primary{
+			     background-color:#2ebc4f;
+			     border-radius:15px;
+			     transition-duration:0.1s;
+			     font-size:15px;
+			     }
+	.btn-primary:hover{
+			     background-color:#ff6600 !important;
+			     }
+	.backgroun-white{
+				       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+				       }
+	
+	.active{
+		   background-color:#ff6600 !important;}
+	
+	.form-control{
+			       border-radius:20px;
+			       }
+	.form-control:hover{
+				          border-color:#2ebc4f;}
+				          
+	.background-white{
+					border-radius:10px;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);}
+	h1{
+		color:#2ebc4f !important;
+		font-family:sans-serif;}
+	
+	h3{
+            font-family:sans-serif;}
+		
+	.menu-advanced{
+				    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+				    border-radius:10px;
+				    }
+	
+</style>
+
+<body >
+
+<div class="page-wrapper">
+
+    <div class="main">
+        <div class="main-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-lg-3">
+                        <div class="sidebar">
+                            <div class="widget">
+    <div class="user-photo">
+        <a href="#">
+            <img src="Images/nn.JPG" alt="User Photo">
+            <span class="user-photo-action">Changer votre avatar</span>
+        </a>
+    </div><!-- /.user-photo -->
+</div><!-- /.widget -->
+
+
+                            <div class="widget">
+
+    <ul class="menu-advanced">
+        <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Editer le profile</a></li>
+        <li class="log"><a href="#"><i class="fa fa-sign-out"></i> Deconnexion</a></li>
+    </ul>
+</div><!-- /.widget -->
+
+                        </div><!-- /.sidebar -->
+                    </div><!-- /.col-* -->
+
+                    <div class="col-sm-8 col-lg-9">
+                        <div class="content">
+                            <div class="page-title">
+    <h1>Editer votre profile</h1>
+</div><!-- /.page-title -->
+
+<div class="background-white p20 mb30">
+    <h3 class="page-title">
+        Information générale
+
+        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer</a>
+    </h3>
+
+    <div class="row">
+        <div class="form-group col-sm-6">
+            <label>Nom</label>
+            <input type="text" class="form-control" value="">
+        </div><!-- /.form-group -->
+
+        <div class="form-group col-sm-6">
+            <label>Prénom(s)</label>
+            <input type="text" class="form-control" value="">
+        </div><!-- /.form-group -->
+
+        <div class="form-group col-sm-6">
+            <label>E-mail</label>
+            <input type="text" class="form-control" value="">
+        </div><!-- /.form-group -->
+
+        <div class="form-group col-sm-6">
+            <label>Téléphone</label>
+            <input type="text" class="form-control" value="">
+        </div><!-- /.form-group -->
+    </div><!-- /.row -->
+</div>
+
+
+<div class="background-white p20 mb30">
+    <h3 class="page-title">
+        Securité
+
+        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer</a>
+    </h3>
+     <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Mo de passe</label>
+
+            <div class="col-sm-9">
+                <input type="password" class="form-control" value="">
+            </div><!-- /.col-* -->
+        </div><!-- /.form-group -->
+
+</div>
+
+                        </div><!-- /.content -->
+                    </div><!-- /.col-* -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.main-inner -->
+    </div><!-- /.main -->
+
+
+
+
+</div><!-- /.page-wrapper -->
+
+<script src="javascript/jquery.js" type="text/javascript"></script>
+<script src="javascript/map.js" type="text/javascript"></script>
+
+<script src="javascript/collapse.js" type="text/javascript"></script>
+<script src="javascript/carousel.js" type="text/javascript"></script>
+<script src="javascript/transition.js" type="text/javascript"></script>
+<script src="javascript/dropdown.js" type="text/javascript"></script>
+<script src="javascript/tooltip.js" type="text/javascript"></script>
+<script src="javascript/tab.js" type="text/javascript"></script>
+<script src="javascript/alert.js" type="text/javascript"></script>
+
+<script src="javascript/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="javascript/jquery.flot.min.js" type="text/javascript"></script>
+<script src="javascript/jquery.flot.spline.js" type="text/javascript"></script>
+
+<script src="javascript/bootstrap-select.min.js" type="text/javascript"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing" type="text/javascript"></script>
+
+<script type="text/javascript" src="javascript/infobox.js"></script>
+<script type="text/javascript" src="javascript/markerclusterer.js"></script>
+<script type="text/javascript" src="javascript/jquery-google-map.js"></script>
+
+<script type="text/javascript" src="javascript/owl.carousel.js"></script>
+<script type="text/javascript" src="javascript/fileinput.min.js"></script>
+
+<script src="javascript/superlist.js" type="text/javascript"></script>
+
+</body>
+</html>
+
