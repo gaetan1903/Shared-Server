@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
 
     <title>Profile</title>
 </head>
@@ -41,10 +43,14 @@
 				       }
 	
 	.active{
-		   background-color:#ff6600 !important;}
+		   background-color:#ff6600 !important;
+		   border-radius:20px;}
 	
 	.form-control{
 			       border-radius:20px;
+			       border-width:0.5px;
+			       border-color:#999;
+			       opacity:0.8;
 			       }
 	.form-control:hover{
 				          border-color:#2ebc4f;}
@@ -53,8 +59,9 @@
 					border-radius:10px;
 					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);}
 	h1{
-		color:#2ebc4f !important;
-		font-family:sans-serif;}
+		color:#ff6600 !important;
+		font-family:sans-serif;
+		font-size:25px !important;}
 	
 	h3{
             font-family:sans-serif;}
@@ -63,10 +70,27 @@
 				    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 				    border-radius:10px;
 				    }
+				    
+	.fa-pencil{
+			color:#2ebc4f;
+			}
+	.fa-pencil:hover{
+			color:#ff6600;
+			}
+			
+	.topnav{
+		      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+		      background-color: #2ebc4f;
+		      height:10%;
+		      position:relative;
+		      }
 	
 </style>
 
 <body >
+
+<div class="topnav">
+</div>
 
 <div class="page-wrapper">
 
@@ -79,7 +103,7 @@
                             <div class="widget">
     <div class="user-photo">
         <a href="#">
-            <img src="Images/nn.JPG" alt="User Photo">
+            <img src="Images/off.jpg" alt="User Photo">
             <span class="user-photo-action">Changer votre avatar</span>
         </a>
     </div><!-- /.user-photo -->
@@ -112,22 +136,22 @@
 
     <div class="row">
         <div class="form-group col-sm-6">
-            <label>Nom</label>
+            <label><b> Nom </b> <i class="fa fa-pencil"> </i> </label>
             <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label>Prénom(s)</label>
+            <label> <b> Prénom(s) <i class="fa fa-pencil"> </i> </b></label>
             <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label>E-mail</label>
+            <label><b> E-mail <i class="fa fa-pencil"> </i> </label>
             <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label>Téléphone</label>
+            <label> <b>Téléphone <i class="fa fa-pencil"> </i> </label>
             <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
     </div><!-- /.row -->
@@ -142,7 +166,7 @@
     </h3>
      <div class="form-horizontal">
         <div class="form-group">
-            <label class="col-sm-2 control-label">Mo de passe</label>
+            <label class="col-sm-2 control-label"> <b> Mot de passe <i class="fa fa-pencil"> </i> </label>
 
             <div class="col-sm-9">
                 <input type="password" class="form-control" value="">
