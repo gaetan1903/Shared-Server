@@ -31,12 +31,15 @@
 			     }
 	.btn-primary{
 			     background-color:#2ebc4f;
-			     border-radius:15px;
+			     border-radius:20px;
 			     transition-duration:0.1s;
 			     font-size:15px;
 			     }
 	.btn-primary:hover{
 			     background-color:#ff6600 !important;
+			     }
+	.btn-primary:after{
+			     background-color:white !important;
 			     }
 	.backgroun-white{
 				       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
@@ -61,7 +64,7 @@
 	h1{
 		color:#ff6600 !important;
 		font-family:sans-serif;
-		font-size:25px !important;}
+		font-size:22px !important;}
 	
 	h3{
             font-family:sans-serif;}
@@ -75,7 +78,7 @@
 			color:#2ebc4f;
 			}
 	.fa-pencil:hover{
-			color:#ff6600;
+			color:#032f62;
 			}
 			
 	.topnav{
@@ -86,6 +89,31 @@
 		      }
 	
 </style>
+
+<script type="text/javascript">
+/* Voici la fonction javascript qui change la propriété "display"
+pour afficher ou non le div selon que ce soit "none" ou "block". */
+
+function AfficherMasquer()
+		{
+			divInfo1 = document.getElementById('divacacher1');
+			divInfo2 = document.getElementById('divacacher2');
+			divInfo3 = document.getElementById('divacacher3');
+
+				if (divInfo1.style.display == 'none')
+			{				
+				divInfo1.style.display = 'block';
+				divInfo2.style.display = 'block';
+				divInfo3.style.display = 'block';
+			}
+				else
+			{
+				divInfo1.style.display = 'none';
+				divInfo2.style.display = 'none';
+				divInfo3.style.display = 'none';
+			}
+		}
+</script>
 
 <body >
 
@@ -103,8 +131,8 @@
                             <div class="widget">
     <div class="user-photo">
         <a href="#">
-            <img src="Images/off.jpg" alt="User Photo">
-            <span class="user-photo-action">Changer votre avatar</span>
+            <img src="Images/ld.JPG" alt="User Photo">
+            <span class="user-photo-action">Modifier votre avatar</span>
         </a>
     </div><!-- /.user-photo -->
 </div><!-- /.widget -->
@@ -124,14 +152,14 @@
                     <div class="col-sm-8 col-lg-9">
                         <div class="content">
                             <div class="page-title">
-    <h1>Editer votre profile</h1>
+    <h1> <b>PROFILE D'UTILISATEUR</h1>
 </div><!-- /.page-title -->
 
 <div class="background-white p20 mb30">
     <h3 class="page-title">
         Information générale
 
-        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer</a>
+        <a href="#" class="btn btn-primary btn-xs pull-right" >Enregistrer</a>
     </h3>
 
     <div class="row">
@@ -141,12 +169,12 @@
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label> <b> Prénom(s) <i class="fa fa-pencil"> </i> </b></label>
+            <label> <b> E-mail <i class="fa fa-pencil"> </i> </b></label>
             <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
         <div class="form-group col-sm-6">
-            <label><b> E-mail <i class="fa fa-pencil"> </i> </label>
+            <label><b> Prénom(s) <i class="fa fa-pencil"> </i> </label>
             <input type="text" class="form-control" value="">
         </div><!-- /.form-group -->
 
@@ -161,18 +189,43 @@
 <div class="background-white p20 mb30">
     <h3 class="page-title">
         Securité
-
         <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer</a>
     </h3>
+     
      <div class="form-horizontal">
         <div class="form-group">
-            <label class="col-sm-2 control-label"> <b> Mot de passe <i class="fa fa-pencil"> </i> </label>
-
+            <label class="col-sm-2 control-label"> <b> Mot de passe <i class="fa fa-pencil" Onclick="AfficherMasquer()" > </i> </label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" value="">
             </div><!-- /.col-* -->
         </div><!-- /.form-group -->
 
+</div>
+<div class="form-horizontal"  id="divacacher1" style="display:none">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> <b> Entrer votre mot de passe actuel <i class="fa fa-pencil"> </i> </label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" value="">
+            </div><!-- /.col-* -->
+        </div><!-- /.form-group -->
+</div>
+
+<div class="form-horizontal" id="divacacher2" style="display:none">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> <b> Nouveau mot de passe <i class="fa fa-pencil"> </i> </label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" value="">
+            </div><!-- /.col-* -->
+        </div><!-- /.form-group -->
+</div>
+
+<div class="form-horizontal" id="divacacher3" style="display:none">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"> <b> Retapez le nouveau mot de passe <i class="fa fa-pencil"> </i> </label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" value="">
+            </div><!-- /.col-* -->
+        </div><!-- /.form-group -->
 </div>
 
                         </div><!-- /.content -->
