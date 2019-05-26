@@ -22,8 +22,48 @@
 </head>
 
 <style>
-	.footer-top{
-		    width:100% !important;}
+	.user-photo{
+			     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+			     border-color:white;
+			     border-radius:10px;
+			     }
+	.btn-primary{
+			     background-color:#2ebc4f;
+			     border-radius:15px;
+			     transition-duration:0.1s;
+			     font-size:15px;
+			     }
+	.btn-primary:hover{
+			     background-color:#ff6600 !important;
+			     }
+	.backgroun-white{
+				       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+				       }
+	
+	.active{
+		   background-color:#ff6600 !important;}
+	
+	.form-control{
+			       border-radius:20px;
+			       }
+	.form-control:hover{
+				          border-color:#2ebc4f;}
+				          
+	.background-white{
+					border-radius:10px;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);}
+	h1{
+		color:#2ebc4f !important;
+		font-family:sans-serif;}
+	
+	h3{
+            font-family:sans-serif;}
+		
+	.menu-advanced{
+				    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+				    border-radius:10px;
+				    }
+	
 </style>
 
 <body >
@@ -39,7 +79,7 @@
                             <div class="widget">
     <div class="user-photo">
         <a href="#">
-            <img src="Images/off.jpg" alt="User Photo">
+            <img src="Images/nn.JPG" alt="User Photo">
             <span class="user-photo-action">Changer votre avatar</span>
         </a>
     </div><!-- /.user-photo -->
@@ -49,8 +89,8 @@
                             <div class="widget">
 
     <ul class="menu-advanced">
-        <li class="active"><a href="#"><i class="fa fa-user"></i> Editer le profile</a></li>
-        <li><a href="#"><i class="fa fa-sign-out"></i> Deconnexion</a></li>
+        <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Editer le profile</a></li>
+        <li class="log"><a href="#"><i class="fa fa-sign-out"></i> Deconnexion</a></li>
     </ul>
 </div><!-- /.widget -->
 
@@ -105,7 +145,7 @@
             <label class="col-sm-2 control-label">Mo de passe</label>
 
             <div class="col-sm-9">
-                <input type="text" class="form-control" value="">
+                <input type="password" class="form-control" value="">
             </div><!-- /.col-* -->
         </div><!-- /.form-group -->
 
