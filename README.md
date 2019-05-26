@@ -1,5 +1,8 @@
-                 SHARED-SERVER
+# Shared-Server
+Projet pour le Concours Interne à l'ESTI pour les L1
 
-Projet pour le Hackathon interne de l'ESTI pour les L1
+Ce projet permet d'installer une entreprise locale un plateforme pour transférer des données (soit documents, ou autre).
 
-Dans le but de numériser les entreprises à Madagascar, notre projet consiste à installer un serveur local dans une entreprise pour pouvoir partager des fichiers instantanément, de stocker des données et pour avoir son propre serveur de base de données. Pour gérer les partages de fichier et l'espace de stockage, nous allons réaliser un site web qui se connecte directement au serveur que nous allons monter nous-même. Un site web dynamique et complet. Et qui contiendras d'autres fonctionnalités qui seront encore à savoir pour vous... 
+Les pré-requis d'une entreprise pour mettre en place ce système est un serveur, c'est à dire que l'on doit avoir un serveur interne et un réseau local interne.
+
+
