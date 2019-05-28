@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" type="image/png" href="Images/favicon-96x96.png" />
+                <title>
+                    SharedServer
+                </title>
+        <style>
+        
+            .topnav{    
+                   display:inline;
+                   background-color: white;
+                   position:fixed; left:0%; top:0%;
+                   border-radius:0px;
+                   opacity:1;
+                   width:100%;
+                   height:8.7%;
+                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+                   }
+                    
+             
+             
+             .h1{
+                position:relative; margin-left:18%; margin-top:8%;
+                font-family:sans-serif; 
+                font-size:16px;
+                color:black;
+                opacity:0.8;
+                display:inline-block;
+                }
+             .h2{
+                position:relative; margin-left:20%; margin-top:2.1%;
+                font-family:sans-serif;
+                font-size:16px;
+                color:black;
+                opacity:0.7;
+                display:block;
+                }
+             .h3{
+                position:relative; margin-left:37%; margin-top:10%;
+                font-family:sans-serif;
+                font-size:16px;
+                color:black;
+                opacity:0.7;
+                display:block;
+                }
+             .h4{
+                position:relative; margin-left:22.5%; margin-top:22%;
+                font-family:sans-serif;
+                font-size:16px;
+                color:black;
+                opacity:0.8;
+                display:inline;
+                }
+             .h5{
+                /*position:fixed; left:20.7%; top:93.2%;*/
+                font-family:sans-serif;
+                font-size:16px;
+                color:#2ebc4f;
+                opacity:1;
+                display:inline;
+                }
+             .h6{
+               /* position:fixed; left:57.5%; top:93.2%;*/
+                font-family:sans-serif;
+                font-size:16px;
+                color:#2ebc4f;
+                opacity:1;
+                display:inline;
+                }
+             .h7{
+                /*position:fixed; left:88.5%; top:93.2%;*/
+                font-family:sans-serif;
+                font-size:16px;
+                color:#2ebc4f;
+                opacity:1;
+                display:inline;
+                }
+             
+             
+             
+             .lien1{
+                font-family:sans-serif;
+                font-size:16px;
+                color:#ff0066;
+                opacity:1;
+                transition-duration:0.3s;
+                display:inline;
+                }
+             .lien2{
+                /*position:relative; margin-top:-10%;*/
+                font-family:sans-serif;
+                font-size:16px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                display:inline-block;
+                }
+             .lien3{
+                /*position:fixed; left:71.5%; top:93.2%;*/
+                font-family:sans-serif;
+                font-size:16px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                display:inline;
+                }
+             .lien4{
+                /*position:fixed; left:44.5%; top:93.2%;*/
+                font-family:sans-serif;
+                font-size:16px;
+                color:#2ebc4f;
+                opacity:1;
+                transition-duration:0.3s;
+                }
+             .lienvoip{
+                      color:#2ebc4f;
+                      }
+             
+             
+             
+             
+             .creer{
+                position:relative; margin-left:84%;margin-top:-3.8%;
+                background-color:#2ebc4f;
+                color:white;
+                border:none;
+                border-radius:5px;
+                opacity:10;
+                font-size:16px;
+                font-family:sans-serif;
+                width:15%;
+                height:80.2%;
+                transition-duration:0.3s;
+                display:block;
+                }
+             .creer:hover{
+                          background-color:#ff6600;
+                          transition-duration:0.3s;
+                         }
+                         
+             
+             .conteneur1{
+                 display:block;
+                 height:450px;
+                 width:59%;
+                 border-radius:20px;
+                 opacity:1;
+                 position:relative; margin-left:2%; margin-top:7%;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+                 z-index:1001;
+                 }
+             
+             .conteneur2{
+                 display:block;
+                 height:450px;
+                 width:34.5%;
+                 border-radius:20px;
+                 opacity:1;
+                 position:relative; margin-left:63.5%; margin-top:-35%;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+                 z-index:1000;
+                 }
+             
+             .conteneur3{
+                 display:block;
+                 height:10%;
+                 width:100%;
+                 position:fixed; left:0%; top:89.9%;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+                 }
+             
+             
+             
+             .im1{
+                 display:inline;
+                 height:90%;
+                 width:12%;
+                 border-radius:0px;
+                 opacity:1;
+                 position:relative; margin-left:10px; margin-top:2px;
+                 transition-duration:0.2s;
+                 }
+             .im1:hover{
+                        height:91%;
+                        width:12.5%;
+                        transition-duration:0.2s;
+                       }
+             
+             
+             @keyframes im2 {
+                             from{position:fixed; left:13%; top:2%;
+                                  opacity:1;}
+                             to{ position:fixed; left:80%; top:2%;
+                                 opacity:0;}
+                            }
+             .im2{
+                 animation-name:im2;
+                 animation-duration:1.5s;
+                 animation-delay:-1s;
+                 animation-iteration-count:infinite;
+                 animation-direction:;
+                 height:4.1%;
+                 width:3%;
+                 border-radius:0px;
+                 opacity:1;
+                 position:fixed; left:13%; top:2%;
+                 display:inline;
+                 }
+             .im3{
+                 height:10%;
+                 width:32%;
+                 border-radius:0px;
+                 opacity:1;
+                 position:relative;margin-left:39%;margin-top:-10%;
+                 transition-duration:0.2s;
+                 display:inline-block;
+                 }
+             .im4{
+                 height:21.2%;
+                 width:39%;
+                 border-radius:0px;
+                 opacity:1;
+                 position:relative; left:28%; margin-top:2%;
+                 transition-duration:0.5s;
+                 display:inline;
+                 }
+             .im9{
+                 height:4.9%;
+                 width:2.5%;
+                 border-radius:0px;
+                 opacity:1;
+                 /*position:fixed; left:18%; top:93%;*/
+                 transition-duration:0.2s;
+                 display:inline;
+                 }
+             .im6{
+                 height:4.9%;
+                 width:4%;
+                 border-radius:0px;
+                 opacity:1;
+                /* position:fixed; left:42%; top:93%;*/
+                 transition-duration:0.2s;
+                 display:inline;
+                 }
+             .im7{
+                 height:4.9%;
+                 width:4%;
+                 border-radius:0px;
+                 opacity:1;
+                 /*position:fixed; left:55%; top:93.2%;*/
+                 display:inline;
+                 }
+             .im8{
+                 height:4.9%;
+                 width:6%;
+                 border-radius:0px;
+                 opacity:1;
+                 /*position:fixed; left:69%; top:93.2%;*/
+                 transition-duration:0.2s;
+                 display:inline;
+                 }
+             .im5{
+                 height:4.9%;
+                 width:3.3%;
+                 border-radius:0px;
+                 opacity:1;
+                 /*position:fixed; left:1%; top:93%;*/
+                 transition-duration:0.2s;
+                 display:inline;
+                 }
+             .im10{
+                 height:4.9%;
+                 width:10%;
+                 border-radius:0px;
+                 opacity:1;
+                 /*position:fixed; left:86%; top:93.2%;*/
+                 transition-duration:0.2s;
+                 display:inline;
+                 }
+                  
+             
+             
+             .mail{
+               position:relative; margin-left:5%; margin-top:0%;
+               width:89%;
+               height:65px;
+               background-color:grey;
+               border-radius:5px;
+               color:black;
+               border:none;
+               opacity:0.3;
+               transition-duration:0.3s;
+               display:block;
+               }
+            .mail:hover{
+                       opacity:0.5;
+                       transition-duration:0.3s;
+                       }
+            .pass{
+               position:relative; margin-left:5%; margin-top:0%;
+               width:89%;
+               height:65px;
+               background-color:grey;
+               border-radius:5px;
+               color:black;
+               border:none;
+               opacity:0.3;
+               transition-duration:0.3s;
+               display:block;
+               }
+            .pass:hover{
+                       opacity:0.5;
+                       transition-duration:0.3s;
+                       }
+            
+            .login{
+                position:relative; margin-left:28%; margin-top:6%;
+                color:white;
+                background-color:#032f62;
+                font-family:sans-serif;
+                font-size:16px;
+                border:none;
+                width:44%;
+                height:40px;
+                opacity:0.9;
+                border-radius:5px;
+                display:block;
+                transition-duration:0.3s;
+                }
+            .login:hover{
+                        width:210px;
+                        height:50px;
+                        transition-duration:0.3s;
+                        }
+                    
+            p{
+             position:relative; margin-left:8%; margin-top:0%;
+             color:black;
+             font-size:16px;
+             font-family:sans-serif;
+             opacity:0.8;
+             width:85%;
+             display:block;
+             }
+             
+             
+            .f1{
+                display:block;
+                position:relative; margin-left:1%; margin-top:1.5%;
+                }
+            .f2{
+                display:block;
+                position:relative; margin-left:17%; margin-top:-2.3%;
+                }
+            .f3{
+            	 display:block;
+                 position:relative; margin-left:43%; margin-top:-2.5%;
+                 }
+            .f4{
+            	display:block;
+                position:relative; margin-left:57%; margin-top:-2.3%;
+                }
+            .f5{
+            	display:block;
+                position:relative; margin-left:70%; margin-top:-2.3%;
+                }
+            .f6{
+                display:block;
+                position:relative; margin-left:88%; margin-top:-1.5%;
+                }
+             
+             
+             
+                        
+        </style>
+        </head>
+        <body>
+           
+           
+            <div class="topnav" class="col-sm-6 col-md-4 col-lg-2">
+                  <img class=im1 src="Images/sslogo.png" alt="ss_logo"/>
+                  <img class=im2 src="Images/folder.png" alt="folder_logo"/>
+                  <button class="creer" type="button" onclick="window.location='signup.html';" >  Créer un compte </button>
+            </div>
+            
+            
+            
+            <div class="conteneur1" class="col-sm-6 col-md-4 col-lg-2">
+                   <img class="im4" src="Images/sslogo.png" alt="ss_logo"/>
+                   <p> Voulez-vous faciliter le partage de fichier dans votre entreprise ou dans votre société? Vous êtes dans le bon endroit. Sharedserver est  une plateforme disponible en réseau  local et sur  mobile android qui permet de faire cela. Elle vous donne une expérience de partage de fichier: fluide, rapide et sécurisé. Vous pouvez aussi discuter avec les  personnels dans votre entreprise ou société grâce au chat et <a class="lienvoip" href="https://fr.wikipedia.org/wiki/Voix_sur_IP "> voix sur IP (VOIP) </a>. Sans oublier que vous pouviez aussi stocker vos fichiers  personnels dans cette plateforme sans problème. En effet, Sharedserver se focalise sur ces trois principes suivants:
+                   </p>      
+            </div>
+            
+            
+            
+            <div class="conteneur2" class="col-sm-6 col-md-4 col-lg-2">
+                  <p class="h1"> Se connecter sur <img class="im3" src="Images/sslogo.png" alt="ss_logo"/> </p>
+                  <form>
+                        <div class="h2">  Nom d'utilisateur ou adresse email </div>
+                        <input class="mail" type="mail" name="mail" >
+                        <div class="h3">  Mot de passe  </div>
+                        <input class="pass" type="password" name="pass" >
+                        <button class="login" type="submit" name="login"> Se connecter </button>
+                  </form>
+                  <p class="h4"> Mot de passe oublié? <a class="lien1" href="Forgotpass.html"> Cliquez ici.</a> </p>
+            </div>
+            
+            
+            
+            <div class="conteneur3" class="col-sm-6 col-md-4 col-lg-2">
+                  <div class="f1"> <img class="im5" src="Images/esti.png" alt="esti_logo"/> <a class="lien2" href="apropos.html"> Qui sommes-nous? </a> </div>
+                  <div class="f2"> <img class="im9" src="Images/gmail.png" alt="gmail_logo"/> <div class="h5"> ambatoroka.f-society@gmail.com </div> </div>
+                  <div class="f3"> <img class="im6" src="Images/fb.png" alt="facebook_logo"/> <a class="lien4" href="facebook"> Shared-server </a> </div>
+                  <div class="f4"> <img class="im7" src="Images/tels.png" alt="telephone_logo"/> <div class="h6">  +261329903072 </div> </div>
+                  <div class="f5"> <img class="im8" src="Images/github.png" alt="github_logo"/>  <a class="lien3" href="https://github.com/gaetan1903/Shared-Server"> SharedServer source </a> </div>
+                  <div class="f6"> <img class="im10" src="Images/cop.png" alt="copyright_logo"/>   <div class="h7"> Copyright 2019 </div> </div>
+           </div>
+        
+        
+        </body>
+    </html>          

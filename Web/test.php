@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$bdd = new PDO('mysql:host=localhost;dbname=bdd_sserver','sserver','sserver') or die("not connect");
+if (isset($_SESSION['id']) AND ($_SESSION['id']) > 0) 
+{
+	
+	$getid = intval($_SESSION['id']);
+	$req = $bdd ->prepare("SELECT * FROM membre WHERE id = ? ");
+	$req ->execute(array($getid));
+	$userinfo = $req -> fetch();
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,6 +187,11 @@
 </style>
 </head> 
 <body>
+<?php
+$user_name_connecter=$userinfo['user_name'];
+if ($userinfo['id'] == $_SESSION['id']) 
+{ 
+?>
 <nav class="navbar navbar-default navbar-expand-xl">
 	<div class="navbar-header d-flex col">
 		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
@@ -196,25 +213,26 @@
 			<li class="nav-item"><a href="#" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">10</span></a></li>
 			<li class="nav-item"><a href="#" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">-5</span></a></li>
 			<li class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="Images/off.jpg" class="avatar" alt="Avatar"> <b class="off"> Offman075  </b><b class="caret"></b></a>
+				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="Images/off.jpg" class="avatar" alt="Avatar"> <b class="off"> <?php echo $userinfo['user_name']; ?> </b><b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
 					<li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Langues</a></li>
 					<li class="divider dropdown-divider"></li>
-					<li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Déconnexion</a></li>
+					<li><a href="se_deconnecter.php" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Déconnexion</a></li>
 				</ul>
 			</li>
 		</ul>
 	</div>
 </nav>
-<?php include("funct.php");
+<?php 
+include("funct.php");
 $extension_fic = array('bat', 'doc', 'docx', 'exe', 'gz', 'odt', 'pps', 'ppt', 'rar', 'tar', 'xls', 'xlsx', 'zip', 
 'XML', 'sh', 'h', 'py', 'odp', 'ods', 'odg', 'pdf', 'txt', 'php', 'html');
 $extension_image = array('bmp', 'gif', 'iso', 'jpeg', 'jpg', 'png', 'eps', 'psd', 'psp', 'tif', 'tiff');
 $extension_audio = array('aac', 'mp3', 'wav', 'mid', 'AAC', 'aac');
 $extension_video = array('avi', 'mkv', 'mov', 'mpg', 'qt', 'ra', 'ram', 'mp4', 'wmv', );
 
-$fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, description_file from file");
+$fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, description_file from file where user_name LIKE '$user_name_connecter'");
 ?>
 
 <div class="container-fluid">
@@ -242,51 +260,57 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
                 <div class="col-md-4">
                     <div class="media">
                         <div class="media-left">
-                        <?php 
+						<?php 
+						
                         $name_file = $fichier['file_name'];
                         $user_file = $fichier['user_name'];
                         $groupe_file = $fichier['groupe_name'];
                         $date_upload_file = $fichier['date_upload'];
                         $description_file = $fichier['description_file'];
-                        $destination = "tutoriels/$name_file";
+                        $destination = "Dossier/$user_name_connecter/$name_file";
                         $extension_a_down = strtolower(substr(strrchr($name_file, '.'), 1));
-                    
-                        ?>
-                          
-                            <?php 
+							if(strlen($name_file)>32)
+							{
+								$name_file = str_replace('_', ' ', substr($name_file, 0, 28));
+								$name_file = "$name_file...";
+							}
+							if(strlen($name_file)<=19)
+							{
+								$name_file = substr($name_file, 0, 19);
+								$name_file = "$name_file <br/>";
+							}
                             if(in_array($extension_a_down, $extension_fic)){
                                 echo '<div id="desc_fic"><img class="media-object" src="fic_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_image)){
                                 echo '<div id="desc_fic"><img class="media-object" src="image_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_audio)){
                                 echo '<div id="desc_fic"><img class="media-object" src="audio_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_video)){
                                 echo '<div id="desc_fic"><img class="media-object" src="video_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             else{
                                 echo '<div id="desc_fic"><img class="media-object" src="autre_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
-                                echo "<a href=\"$destination\">Download</a>";
+                                echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             ?>
-                              
-                            
+                    
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading"><br/></h4>
@@ -300,6 +324,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
     </div>
 </div>
 
+
 	     	<!-- Modal HTML -->
 			 <div id="myModal" class="modal fade">
 	
@@ -311,7 +336,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="test.php" method="post" enctype="multipart/form-data">
+				<form action="insertion.php" method="POST" enctype="multipart/form-data">
 					
 					<span class="fichier">Fichier :</span>
 						<input type="file"  name="fichier" /><br /><br />
@@ -335,6 +360,11 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 		</div>
 	</div>
 </div>
-
+<?php
+    }
+?>
 </body>
 </html>   
+<?php
+}
+?>

@@ -1,14 +1,9 @@
 <?php
-session_start();
+	session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
-if (isset($_GET['id']) AND ($_GET['id']) > 0) 
-{
-	$getid = intval($_GET['id']);
-	$req = $bdd ->prepare("SELECT * FROM membre WHERE id = ? ");
-	$req ->execute(array($getid));
-	$userinfo = $req -> fetch();
-?>  
+	$bdd = new PDO('mysql:host=localhost;dbname=bdd_sserver','sserver','sserver') or die("not connect");
+	
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -201,29 +196,66 @@ if (isset($_GET['id']) AND ($_GET['id']) > 0)
 	
 	</style>
 	<body>
-        
-        <div class="topnav" class="col-sm-6 col-md-4 col-lg-2" >
-            <?php
-            if ($userinfo['id'] == $_SESSION['id']) 
-			{ 
-            ?>
-            <a class="active" href="shared-server.html"><?php echo $userinfo['user_name']; ?></a>
-  			<a href="fonction.html">Accueil</a>
+		
+		
+                
+                <div class="topnav" class="col-sm-6 col-md-4 col-lg-2" >
+  			<a class="active" href="index.html">Accueil</a>
+  			<a href="fonction.html">Fonctionnalités</a>
   			<a href="gallery.html">Gallerie</a>
-  			<a href="membre.html">Amis</a>
-            <a href="http://localhost/projet/create.php">Editer le profil</a>
-			<a href="http://localhost/projet/Shared-Server-1/Web/se_deconnecter.php">Se deconnecter</a>
-            <?php
-            }
-
-            ?>
+  			<a href="membre.html">Membres</a>
+  			<a href="contact.html"> Nous contacter </a>
 		</div>
-			
+		
+		
+		 <div class="conteneur1" class="col-sm-6 col-md-4 col-lg-2">
+                   	<h1> SHARED-SERVER</h1>
+                   	<p> Voulez-vous faciliter le partage de fichier dans votre entreprise ou dans votre société? Vous êtes dans le bon endroit. Sharedserver est  une plateforme disponible en réseau  local et sur  mobile android qui permet de faire cela. Elle vous donne une expérience de partage de fichier: fluide, rapide et sécurisé. Vous pouvez aussi discuter avec les  personnels dans votre entreprise ou société grâce au chat et <a class="lienvoip" href="https://fr.wikipedia.org/wiki/Voix_sur_IP "> VOIP </a>. Sans oublier que vous pouviez aussi stocker vos fichiers  personnels dans cette plateforme sans problème. 
+                   	</p>      
+            	</div>
+            	
+            	
+            
+            	<div class="boutons" class="col-sm-6 col-md-4 col-lg-2"> 
+            		<button type="button" class="btn btn-outline-info" href="#myModal"  data-toggle="modal" >Se connecter</button> 
+            		<button onclick='window.location="create.php"' type="button" class="btn btn-outline-danger">S'inscrire gratuitement maintenant</button>
+            	</div>
 
+            	
+            	<!-- Modal HTML -->
+	<div id="myModal" class="modal fade">
+	
 
+		<div class="modal-dialog modal-login">
+			<div class="modal-content">
+				<div class="modal-header">
+               				 <div class="avatar"><i class="material-icons">&#xE7FD;</i></div>
+               				 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form action="se_connecter.php" method="post">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Nom d'utilisateur ou adresse email" name="connectmail" >
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Mot de passe" name="connectmdp" >
+						</div>
+						<div class="form-group">
+							<input type="submit" class="btn btn-primary btn-block btn-lg" name="se_connecter" value="Login">
+						</div>
+						<?php
+						if(isset($erreur))
+						{
+							echo '<font color="red">'.$erreur."</font>";
+						}
+						?>
+					</form>				
+					<div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
+				</div>
+			</div>
+		</div>
+	</div>  
+		
 	
 	</body>
 </html>
-<?php
-}
-?>
