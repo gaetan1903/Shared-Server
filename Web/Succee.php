@@ -1,17 +1,26 @@
+<!DOCTYPE html>
+<html> 
+<head><title>Succée</title></head> 
+	<body> 
+		<form action="ac.php" method="post"> 
+			<div> 
+				Fichier télécharger avec succée <br />
+				Description du fichier:
+				<?php  echo $_POST["description_file"];?><br /> 
+				Revenir à l'acceuil 
+				<input type="submit" name="valider" value="Retour" /><br /> 
+				<?php echo $message; ?> 
+			</div> 
+		</form> 
+	</body> 
+</html>
+
+
 <?php
-session_start();
 include("funct.php");
-if (isset($_SESSION["id"])) 
-{
-	$getid = intval($_SESSION['id']);
-	$req = $bdd ->prepare("SELECT * FROM membre WHERE id = ? ");
-	$req ->execute(array($getid));
-	$userinfo = $req -> fetch();
-
-
 $message = ""; 
-$user_name = $userinfo['user_name'];
-$groupe_name = 'dfdfd fd df df dfd fd fddf'; 
+$user_name = 'test';
+$groupe_name = 'G1'; 
 
 if (isset($_POST["valid"]))
 { 
@@ -41,7 +50,7 @@ if (isset($_POST["valid"]))
 		case UPLOAD_ERR_OK : 
 			// Fichier bien reçu. 
 			// Détermine sa destination finale. 
-			$destination = "../../Web/Dossier/$user_name/$file_name"; 
+			$destination = "tutoriels/$file_name"; 
 
 			// Copie le fichier temporaire 
 			if (copy($fichier_temporaire,$destination))
@@ -118,6 +127,4 @@ if (isset($_POST["valid"]))
 	}
 
 }
-header("Location: test.php?id=".$_SESSION['id']);
-}
-?>	
+?>
