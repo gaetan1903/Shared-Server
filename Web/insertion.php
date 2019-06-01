@@ -11,7 +11,7 @@ if (isset($_SESSION["id"]))
 
 $message = ""; 
 $user_name = $userinfo['user_name'];
-$groupe_name = $user_name; 
+$groupe_name = 'dfdfd fd df df dfd fd fddf'; 
 
 if (isset($_POST["valid"]))
 { 
@@ -41,7 +41,7 @@ if (isset($_POST["valid"]))
 		case UPLOAD_ERR_OK : 
 			// Fichier bien reçu. 
 			// Détermine sa destination finale. 
-			$destination = "Dossier/$user_name/$file_name"; 
+			$destination = "../../Web/Dossier/$user_name/$file_name"; 
 
 			// Copie le fichier temporaire 
 			if (copy($fichier_temporaire,$destination))

@@ -180,6 +180,12 @@ if (isset($_SESSION['id']) AND ($_SESSION['id']) > 0)
 	.fichier {
 		color: black;
 	}
+	.titre {
+		color: black;
+		position: absolute;
+		left: 40%;
+
+	}
     #desc_fic {
         color: white;
     }
@@ -238,6 +244,11 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
+		<div class="media-left">
+            
+                <a href="#myModal_groupe" data-toggle="modal"><img class="media-object" src="Images/créer_groupe.png"></a>
+            
+        </div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam eos, quod pariatur voluptas maiores vero earum perspiciatis ex dignissimos? Aliquam deserunt omnis suscipit numquam blanditiis ipsum dicta dolorem eligendi maiores!</p>
         </div>
         <div class="col-md-10">
@@ -246,7 +257,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <a href="#myModal" data-toggle="modal"><img class="media-object" src="ajouter_ajouter.png"></a>
+                                <a href="#myModal_fichier" data-toggle="modal"><img class="media-object" src="Images/ajouter_ajouter.png"></a>
                             </a>
                         </div>
                         <div class="media-body">
@@ -267,7 +278,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
                         $groupe_file = $fichier['groupe_name'];
                         $date_upload_file = $fichier['date_upload'];
                         $description_file = $fichier['description_file'];
-                        $destination = "Dossier/$user_name_connecter/$name_file";
+                        $destination = "../../Web/Dossier/$user_name_connecter/$name_file";
                         $extension_a_down = strtolower(substr(strrchr($name_file, '.'), 1));
 							if(strlen($name_file)>32)
 							{
@@ -280,31 +291,31 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 								$name_file = "$name_file <br/>";
 							}
                             if(in_array($extension_a_down, $extension_fic)){
-                                echo '<div id="desc_fic"><img class="media-object" src="fic_new.png">'.$name_file.'<br/>
+                                echo '<div id="desc_fic"><img class="media-object" src="Images/fic_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
                                 echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_image)){
-                                echo '<div id="desc_fic"><img class="media-object" src="image_new.png">'.$name_file.'<br/>
+                                echo '<div id="desc_fic"><img class="media-object" src="Images/image_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
                                 echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_audio)){
-                                echo '<div id="desc_fic"><img class="media-object" src="audio_new.png">'.$name_file.'<br/>
+                                echo '<div id="desc_fic"><img class="media-object" src="Images/audio_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
                                 echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             elseif(in_array($extension_a_down, $extension_video)){
-                                echo '<div id="desc_fic"><img class="media-object" src="video_new.png">'.$name_file.'<br/>
+                                echo '<div id="desc_fic"><img class="media-object" src="Images/video_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
                                 echo "<a href=\"$destination\">Download</a><br/><br/>";
                             }
                             else{
-                                echo '<div id="desc_fic"><img class="media-object" src="autre_new.png">'.$name_file.'<br/>
+                                echo '<div id="desc_fic"><img class="media-object" src="Images/autre_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
                                 <br/></div>';
                                 echo "<a href=\"$destination\">Download</a><br/><br/>";
@@ -325,8 +336,8 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 </div>
 
 
-	     	<!-- Modal HTML -->
-			 <div id="myModal" class="modal fade">
+	     	<!-- Modal HTML Ajouter un fichier-->
+			 <div id="myModal_fichier" class="modal fade">
 	
 
 	<div class="modal-dialog modal-login">
@@ -337,7 +348,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 			</div>
 			<div class="modal-body">
 				<form action="insertion.php" method="POST" enctype="multipart/form-data">
-					
+					<span class="titre">Ajouter un fichier</span><br/><br/><br/>
 					<span class="fichier">Fichier :</span>
 						<input type="file"  name="fichier" /><br /><br />
 					
@@ -355,11 +366,59 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 					}
 					?>
 				</form>				
-				<div class="hint-text small"><a href="#">Forgot Your Password?</a></div>
+				
 			</div>
 		</div>
 	</div>
 </div>
+
+			<!-- Modal HTML Créer un groupe-->
+<div id="myModal_groupe" class="modal fade">
+	
+
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+							<div class="avatar"><i class="material-icons">&#xE7FD;</i></div>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="insertion.php" method="POST">
+					<span class="titre">Créer un groupe</span><br/><br/><br/>
+					<span class="fichier">Nom du groupe :</span>
+						<input type="text"  name="new_groupe_name" /><br /><br />
+					
+					<div class="form-group">
+					<span class="fichier">Membre du groupe </span><br/><br/>
+					<form action="test.php" method="POST">
+						<span class="fichier">User name :</span>
+						<input type="text"  name="name_membre" />
+						<input type="submit" name="ajout_groupe" value="Invité"/>
+					</form>
+					
+
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" name="créer_groupe" value="Créer le groupe"/>
+					</div>
+					<?php
+					if(isset($erreur))
+					{
+						echo '<font color="red">'.$erreur."</font>";
+					}
+					?>
+				</form>				
+				
+			</div>
+		</div>
+	</div>
+</div>
+<?php
+					if(isset($_POST['ajout_groupe']))
+					{
+						header("Location: myModal_groupe");
+					}
+					?>
 <?php
     }
 ?>
