@@ -14,7 +14,7 @@
     <link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
     <link href="css/fileinput.min.css" rel="stylesheet" type="text/css">
     <link href="css/superlist.css" rel="stylesheet" type="text/css" >
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/icon?family=Material+Icons">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -27,16 +27,17 @@
 	.user-photo{
 			     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 			     border-color:white;
-			     border-radius:10px;
+			     border-radius:5px;
 			     }
 	.btn-primary{
-			     background-color:#2ebc4f;
+			     background-image: linear-gradient(to right, #4b0082, #7a238a);
 			     border-radius:20px;
 			     transition-duration:0.1s;
 			     font-size:15px;
+			     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 			     }
 	.btn-primary:hover{
-			     background-color:#ff6600 !important;
+			     background-color:#7a238a !important;
 			     }
 	.btn-primary:after{
 			     background-color:white !important;
@@ -46,7 +47,8 @@
 				       }
 	
 	.active{
-		   background-color:#ff6600 !important;
+		   background-image: linear-gradient(to right, #4b0082, #7a238a) !important;
+		   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 		   border-radius:20px;}
 	
 	.form-control{
@@ -54,15 +56,26 @@
 			       border-width:0.5px;
 			       border-color:#999;
 			       opacity:0.8;
+			       transition-duration:0.00000001s;
 			       }
 	.form-control:hover{
-				          border-color:#2ebc4f;}
-				          
+				          border-color:white;
+				          transition-duration:0.2s;
+				          border-radius:20px;
+				          }
+	.form-control:focus{
+				          border-bottom-color:#4b0082;
+				          border-top-color:white;
+				          border-left-color:white;
+				          border-right-color:white; 
+				          border-radius:0px;
+				          }
 	.background-white{
-					border-radius:10px;
-					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);}
+					border-radius:5px;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+					}
 	h1{
-		color:#ff6600 !important;
+		color:#7a238a !important;
 		font-family:sans-serif;
 		font-size:22px !important;}
 	
@@ -71,20 +84,20 @@
 		
 	.menu-advanced{
 				    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-				    border-radius:10px;
+				    border-radius:5px;
 				    }
 				    
 	.fa-pencil{
-			color:#2ebc4f;
+			color:#4b0082;
 			}
 	.fa-pencil:hover{
-			color:#032f62;
+			color:#7a238a;
 			}
 			
 	.topnav{
 		      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-		      background-image: linear-gradient(to left, #2ebc4f, #0d5f4f);
-		      height:10%;
+		      background-image: linear-gradient(to right, #4b0082, #7a238a);
+		      height:12%;
 		      position:relative;
 		      }
 	
@@ -131,7 +144,7 @@ function AfficherMasquer()
                             <div class="widget">
     <div class="user-photo">
         <a href="#">
-            <img src="Images/ld.JPG" alt="User Photo">
+            <img src="Images/gae.JPG" alt="User Photo">
             <span class="user-photo-action">Modifier votre avatar</span>
         </a>
     </div><!-- /.user-photo -->
@@ -159,7 +172,7 @@ function AfficherMasquer()
     <h3 class="page-title">
         Information générale
 
-        <a href="#" class="btn btn-primary btn-xs pull-right" >Enregistrer <i class="fa fa-save"> </i></a>
+        <a href="#" class="btn btn-primary btn-xs pull-right" >Enregistrer <i class="fa fa-sign-out"> </i></a>
     </h3>
 
     <div class="row">
@@ -189,7 +202,7 @@ function AfficherMasquer()
 <div class="background-white p20 mb30">
     <h3 class="page-title">
         Securité
-        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer <i class="fa fa-save"> </i></a>
+        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer <i class="fa fa-sign-out"> </i></a>
     </h3>
      
      <div class="form-horizontal">
