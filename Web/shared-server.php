@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	$bdd = new PDO('mysql:host=localhost;dbname=bdd_sserver','sserver','sserver') or die("not connect");
+	$bdd = new PDO('mysql:host=localhost;dbname=espace_membres','root','') or die("not connect");
 	
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 	      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	      <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-	      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	      <title>Shared-server</title>
 	</head>
 	<style>
@@ -81,9 +81,9 @@
 		 h1{
 		    	color:#2ebc4f;
 		    	font-family:sans-serif;
-		   	position:relative; margin-left:25%;  }
+		   	position:relative; margin-left:24.5%;  }
 	         p{
-	       		font-size:17px;
+	       		font-size:16px;
 	       		color:white;
 	       		font-family:sans-serif;
 	       		position:relative;margin-top:4%; }
@@ -95,22 +95,22 @@
 	         			   }
 	         
 	         .boutons{
-	         		 position:relative; margin-left:33%; margin-top:4%;
+	         		 position:relative; margin-left:34%; margin-top:4%;
 	         		 }
-	         .btn-outline-info{
-	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#2ebc4f;color:white; border-color:#2ebc4f;
+	         .btn-success{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px; background-color:#2ebc4f;
 	       		    }
-	        .btn-outline-info:hover{
-	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#2ebc4f;color:white; border-color:#2ebc4f;
+	        .btn-success:hover{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#ff6600; border-color:#ff6600;
 	       		    }
 	          
-	       .btn-outline-danger{
-	       		transition-duration:1s; padding:14px;display:inline; color:#2ebc4f; border-color:#2ebc4f; position:relative; margin-left:2%; border-radius:100px;
+	       .btn-outline-success{
+	       		transition-duration:1s; padding:14px;display:inline; color:#2ebc4f; border-color:#2ebc4f;background-color:none; position:relative; 
+	       		margin-left:2%; border-radius:100px;
 	       		    }
-	        .btn-outline-danger:hover{
-	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;background-color:#2ebc4f;color:white; border-color:#2ebc4f;
+	        .btn-outline-success:hover{
+	       		transition-duration:1s; padding:14px;display:inline; border-radius:100px;color:white;
 	       		    }
-	       		    
 	          .pn{
 	             position:fixed; margin-left:8%; margin-top:5%;
 	             }
@@ -191,20 +191,87 @@
 						display: inline-block;
 						margin: 100px auto;
 						}
-	
+						
+						
+						
+						.topnav .icon {
+				  display: none;
+				}
+
+	/*Responsivité------------------------------------------------------------------------------------------------------------------------------------------*/
+				@media screen and (max-width: 875px) {
+				  .topnav a:not(:first-child) {display: none;}
+				  .topnav a.icon {
+				    float: right;
+				    display: block;
+				  }
+				  .topnav{
+				  		background-color:#2ebc4f;
+				  		color:white;
+				  		}
+				 .topnav a{
+				  padding: 11px 18px;}
+				 
+				 .topnav a:hover{
+				  			     background-color:white;
+				  			     color:#555
+				  			     }
+				  h1{
+				      position:relative; margin-left:8%;
+				      font-size:23px;
+				      }
+				   
+				  .boutons{
+				  		position:relative; margin-left:15%; margin-bottom:10%;
+				  		}
+				  		
+				  .conteneur1{
+				   position:relative; margin-top:90px;
+				   }
+				  			     
+				  			     }
+	/*Responsivité ------------------------------------------------------------------------------------------------------------------------*/
+
+				
+				@media screen and (max-width: 875px) {
+				  .topnav.responsive {position: relative;}
+				  .topnav.responsive .icon {
+				    position: absolute;
+				    right: 0;
+				    top: 0;
+				  }
+				  .topnav.responsive a {
+				    float: none;
+				    display: block;
+				    text-align: left;
+				  }
+				}
 	
 	
 	</style>
+	
+	<script>
+			function myFunction() {
+	  		var x = document.getElementById("myTopnav");
+	  		if (x.className === "topnav") {
+	    		x.className += " responsive";
+	  		} else {
+	    		x.className = "topnav";
+	  		}
+			}
+	</script>	
+	
 	<body>
 		
-		
                 
-                <div class="topnav" class="col-sm-6 col-md-4 col-lg-2" >
+                <div class="topnav" class="col-sm-6 col-md-4 col-lg-2" id="myTopnav" >
   			<a class="active" href="index.html">Accueil</a>
   			<a href="fonction.html">Fonctionnalités</a>
   			<a href="gallery.html">Gallerie</a>
   			<a href="membre.html">Membres</a>
   			<a href="contact.html"> Nous contacter </a>
+  			<a href="downapp.html"> Télécharger </a>
+  			<a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
 		</div>
 		
 		
@@ -217,8 +284,8 @@
             	
             
             	<div class="boutons" class="col-sm-6 col-md-4 col-lg-2"> 
-            		<button type="button" class="btn btn-outline-info" href="#myModal"  data-toggle="modal" >Se connecter</button> 
-            		<button onclick='window.location="create.php"' type="button" class="btn btn-outline-danger">S'inscrire gratuitement maintenant</button>
+            		<button type="button" class="btn btn-success" href="#myModal"  data-toggle="modal" >Se connecter</button> 
+            		<button onclick='window.location="create.php"' type="button" class="btn btn-outline-success">S'inscrire gratuitement maintenant</button>
             	</div>
 
             	
@@ -233,7 +300,7 @@
                				 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form action="se_connecter.php" method="post">
+					<form action="dir.php" method="post">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Nom d'utilisateur ou adresse email" name="connectmail" >
 						</div>

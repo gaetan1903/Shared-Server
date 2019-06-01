@@ -18,7 +18,7 @@ if (isset($_SESSION["id"]))
 
 $message = ""; 
 $user_name = $userinfo['user_name'];
-$groupe_name = $user_name; 
+$groupe_name = 'dfdfd fd df df dfd fd fddf'; 
 
 if (isset($_POST["valid"]))
 { 
