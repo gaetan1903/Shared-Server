@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+
 <?php
 session_start();
 include("funct.php");
@@ -41,21 +48,18 @@ if (isset($_POST["valid"]))
 		case UPLOAD_ERR_OK : 
 			// Fichier bien reçu. 
 			// Détermine sa destination finale. 
-			$destination = "Dossier/$user_name/$file_name"; 
+			$destination = "../../Web/Dossier/$user_name/$file_name"; 
 
 			// Copie le fichier temporaire 
 			if (copy($fichier_temporaire,$destination))
 			{ 
 				// Copie OK
-				$message  = "Transfert termine - Fichier = $nom - "; 
-				$message .= "Taille = $taille octets - "; 
-				$message .= "Type MIME = $type_mime."; 
 
 				$insert_file = $bdd->prepare('INSERT INTO file(user_name, file_name, groupe_name, description_file) VALUES(?,?,?,?)');
 				$insert_file -> execute(array($user_name, $file_name, $groupe_name, $description_file));
 				$insert_file -> closeCursor();
 
-
+				$message = 'OK';
 				//$connectio_ssh2 = ssh2_connect('localhost', 22);
 				//ssh2_auth_password($connectio_ssh2, 'mm', 'azert');
 				//ssh2_exec($connectio_ssh2, 'upload_file '.$file_name.' '.$user_name.' '.$groupe_name);
@@ -118,6 +122,24 @@ if (isset($_POST["valid"]))
 	}
 
 }
-header("Location: test.php?id=".$_SESSION['id']);
+	if($message == 'OK'){
+		
+		?>
+		<script src='javascript/jquery-3.4.1.min.js'></script>
+		<script>
+		jQuery(function(){
+			alert("Fichier bien envoyer!");			
+		});
+		</script>
+
+		<?php
+		header("Location: test.php?id=".$_SESSION['id']);
+	}
+	else
+	{
+		echo $message;
+	}
 }
-?>	
+?>
+</body>	
+</html>
