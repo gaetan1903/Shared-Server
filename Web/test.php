@@ -193,6 +193,9 @@ if (isset($_SESSION['id']) AND ($_SESSION['id']) > 0)
 </style>
 </head> 
 <body>
+
+<script src="javascript/jquery-3.4.1.min.js"></script>
+
 <?php
 $user_name_connecter=$userinfo['user_name'];
 if ($userinfo['id'] == $_SESSION['id']) 
@@ -290,6 +293,11 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 								$name_file = substr($name_file, 0, 19);
 								$name_file = "$name_file <br/>";
 							}
+							if(strlen($groupe_file)<=19)
+							{
+								$groupe_file = substr($groupe_file, 0, 19);
+								$groupe_file = "$groupe_file <br/>";
+							}
                             if(in_array($extension_a_down, $extension_fic)){
                                 echo '<div id="desc_fic"><img class="media-object" src="Images/fic_new.png">'.$name_file.'<br/>
                                 Propriétaire: '.$user_file.'<br/>Groupe: '.$groupe_file.'<br/>Upload: '.$date_upload_file.'
@@ -356,7 +364,7 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 					<span class="fichier">Description fichier :</span>
 						<textarea name="description_file" rows="7" cols="45" class="form-control" placeholder="Description du fichier" name="description_file" ></textarea>
 					</div>
-					<div class="form-group">
+					<div class="form-group" id="t">
 						<input type="submit" class="btn btn-primary btn-block btn-lg" name="valid" value="Envoyer le fichier"/>
 					</div>
 					<?php
@@ -383,23 +391,16 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="insertion.php" method="POST">
+				<form action="groupe.php" method="POST">
 					<span class="titre">Créer un groupe</span><br/><br/><br/>
 					<span class="fichier">Nom du groupe :</span>
-						<input type="text"  name="new_groupe_name" /><br /><br />
-					
-					<div class="form-group">
-					<span class="fichier">Membre du groupe </span><br/><br/>
-					<form action="test.php" method="POST">
-						<span class="fichier">User name :</span>
-						<input type="text"  name="name_membre" />
-						<input type="submit" name="ajout_groupe" value="Invité"/>
-					</form>
-					
+						<input type="text"  name="name_new_groupe" required/><br /><br />
+						Droit des membres:<br>
+						<input type="checkbox" name="ajouter" id="ajouter" /> <label for="ajouter">Ajouter des membres</label><br /><br />
+						<input type="checkbox" name="suppr" id="suppr" /> <label for="suppr">Supprimer des membres</label><br /><br />
 
-					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-primary btn-block btn-lg" name="créer_groupe" value="Créer le groupe"/>
+						<span class="test"><input type="submit" class="btn btn-primary btn-block btn-lg" name="créer_groupe" value="Créer le groupe"/></span>
 					</div>
 					<?php
 					if(isset($erreur))
@@ -414,11 +415,11 @@ $fichiers = $bdd->query("SELECT user_name, file_name, groupe_name, date_upload, 
 	</div>
 </div>
 <?php
-					if(isset($_POST['ajout_groupe']))
-					{
-						header("Location: myModal_groupe");
-					}
-					?>
+	if(isset($_POST['ajout_groupe']))
+	{
+		header("Location: myModal_groupe");
+	}
+	?>
 <?php
     }
 ?>
