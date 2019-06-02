@@ -30,7 +30,7 @@
 			     border-radius:5px;
 			     }
 	.btn-primary{
-			     background-image: linear-gradient(to right, #4b0082, #7a238a);
+			     background-image: linear-gradient(to right, #4b0082, #7a283a);
 			     border-radius:20px;
 			     transition-duration:0.1s;
 			     font-size:15px;
@@ -47,8 +47,8 @@
 				       }
 	
 	.active{
-		   background-image: linear-gradient(to right, #4b0082, #7a238a) !important;
-		   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+		   background-image: linear-gradient(to right, #4b0082, #7a283a) !important;
+		   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 		   border-radius:20px;}
 	
 	.form-control{
@@ -69,10 +69,11 @@
 				          border-left-color:white;
 				          border-right-color:white; 
 				          border-radius:0px;
+				          transition-duration:0.7s;
 				          }
 	.background-white{
 					border-radius:5px;
-					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 					}
 	h1{
 		color:#7a238a !important;
@@ -96,10 +97,14 @@
 			
 	.topnav{
 		      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-		      background-image: linear-gradient(to right, #4b0082, #7a238a);
+		      background-image: linear-gradient(to right, #4b0082, #7a283a);
 		      height:12%;
 		      position:relative;
 		      }
+		      
+	.page-wrapper{
+				  background-color:#fff;
+				}
 	
 </style>
 
@@ -165,14 +170,14 @@ function AfficherMasquer()
                     <div class="col-sm-8 col-lg-9">
                         <div class="content">
                             <div class="page-title">
-    <h1> <b>PROFILE D'UTILISATEUR</h1>
+    <h1> <b> <i class="fa fa-user"> </i> PROFILE D'UTILISATEUR <i class="fa fa-user"></i></h1>
 </div><!-- /.page-title -->
 
 <div class="background-white p20 mb30">
     <h3 class="page-title">
         Information générale
 
-        <a href="#" class="btn btn-primary btn-xs pull-right" >Enregistrer <i class="fa fa-sign-out"> </i></a>
+        <a href="#" class="btn btn-primary btn-xs pull-right" > <b>Enregistrer</b> <i class="fa fa-sign-out"> </i></a>
     </h3>
 
     <div class="row">
@@ -202,7 +207,7 @@ function AfficherMasquer()
 <div class="background-white p20 mb30">
     <h3 class="page-title">
         Securité
-        <a href="#" class="btn btn-primary btn-xs pull-right">Enregistrer <i class="fa fa-sign-out"> </i></a>
+        <a href="#" class="btn btn-primary btn-xs pull-right"><b>Enregistrer</b> <i class="fa fa-sign-out"> </i></a>
     </h3>
      
      <div class="form-horizontal">
