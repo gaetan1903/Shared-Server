@@ -1,0 +1,17 @@
+.gal{
+          height: 72%;
+          width: 70%;
+          position: fixed;top:15%; left:15%;
+}
+.btn{
+                    border-radius: 20px;
+                    background-color:#dc3545;
+                    border:none;
+                    color:white;
+                    padding: 10px 20px;
+}
+.btn:hover{
+          padding: 10px 22px;
+          transition-duration: 0.3s;
+          box-shadow: 0 4px 8px 0 #dc3545, 0 6px 5px 0 rgba(0, 0, 0, 9);
+}
