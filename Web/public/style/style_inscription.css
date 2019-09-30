@@ -1,0 +1,166 @@
+	
+	  body{
+        background-image:url("Images/po4.jpg");
+        opacity:1;
+        background-size:cover;
+        height:5%;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-color:white;
+        }
+
+
+
+.form-control, .form-control:focus, .input-group-addon {
+border-color: #e1e1e1;
+}
+.form-control, .btn {        
+border-radius: 3px;
+}
+.signup-form {
+width:395px;
+margin: 0 auto;
+padding: 30px 0;
+position:relative; margin-top:3%;
+}
+.signup-form form {
+color: #999;
+border-radius: 3px;
+margin-bottom: 15px;
+background: #fff;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+padding: 30px;
+}
+.signup-form h2 {
+color: #333;
+font-weight: bold;
+margin-top: 0;
+}
+.signup-form hr {
+margin: 0 -30px 20px;
+}
+.signup-form .form-group {
+margin-bottom: 20px;
+}
+.signup-form label {
+font-weight: normal;
+font-size: 13px;
+}
+.signup-form .form-control {
+min-height: 38px;
+box-shadow: none !important;
+}	
+.signup-form .input-group-addon {
+max-width: 42px;
+text-align: center;
+}
+.signup-form input[type="checkbox"] {
+margin-top: 2px;
+}   
+.signup-form .btn{        
+font-size: 16px;
+font-weight: bold;
+background: #19aa8d;
+border: none;
+min-width: 140px;
+}
+.signup-form .btn:hover, .signup-form .btn:focus {
+background: #179b81;
+outline: none;
+}
+.signup-form a {
+color: #fff;	
+text-decoration: underline;
+}
+.signup-form a:hover {
+text-decoration: none;
+}
+.signup-form form a {
+color: #19aa8d;
+text-decoration: none;
+}	
+.signup-form form a:hover {
+text-decoration: underline;
+}
+.signup-form .fa {
+font-size: 21px;
+}
+.signup-form .fa-paper-plane {
+font-size: 18px;
+}
+.signup-form .fa-check {
+color: #fff;
+left: 17px;
+top: 18px;
+font-size: 7px;
+position: absolute;
+}
+
+.text-center{
+           color:teal;
+           }
+           
+           
+                      }
+.modal-login {
+               color: #434343;
+        width: 350px;
+       }
+.modal-login .modal-content {
+                       padding: 20px;
+                       border-radius: 1px;
+                       border: none;
+                                  position: relative;
+                       }
+.modal-login .modal-header {
+                       border-bottom: none;
+                     }
+.modal-login h4 {
+           text-align: center;
+           font-size: 22px;
+                      margin-bottom: -10px;
+            }
+.modal-login .avatar {
+                       color: #fff;
+               margin: 0 auto;
+                   text-align: center;
+               width: 100px;
+               height: 100px;
+               border-radius: 50%;
+               z-index: 9;
+               background: #2ebc4f;
+               padding: 15px;
+               box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+               }
+ .modal-login .avatar i {
+           font-size: 62px;
+               }
+.modal-login .form-control, .modal-login .btn {
+           min-height: 40px;
+           border-radius: 1px; 
+           transition: all 0.5s;
+                                   }    
+.modal-login .hint-text {
+               text-align: center;
+               padding-top: 10px;
+                                     }
+.modal-login .close {
+               position: absolute;
+               top: 15px;
+               right: 15px;
+               }
+.modal-login .btn {
+               background: #2ebc4f;
+               border: none;
+               line-height: normal;
+              }
+ .modal-login .btn:hover, .modal-login .btn:focus {
+                                       background: #2ebc4f;
+                                       }
+ .modal-login .hint-text a {
+                       color: #999;
+                   }
+ .trigger-btn {
+           display: inline-block;
+           margin: 100px auto;
+           }
