@@ -1,14 +1,4 @@
 <?php
-/*
-$user = "ntsoa";
-$user = "".$user."_pdp";
-echo $user;
-echo 'Alert("aaa")';
-echo "<br><br>";
-echo '<script language="javascript">';
-echo 'alert("'.$user.'")';
-echo '</script>';
-*/
 
 function multi($a, $b){
     $z = $a * $b;
