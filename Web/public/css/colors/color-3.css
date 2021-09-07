@@ -1,0 +1,145 @@
+a.nile-bottom,
+#search .btn {
+  background-color: #f38844;
+}
+
+a.action-bottom:hover {
+  background-color: #f38844;
+}
+
+.service.layout-2 {
+  background-color: #474747;
+}
+
+footer.layout-light .nile-widget.widget_nav_menu ul li a:before {
+  color: #f38844;
+}
+
+.price-table.active,
+.blog-item .date span.day {
+  background-color: #f38844;
+}
+
+.background-1 {
+  background-color: #fffee5;
+}
+
+.background-2 {
+  background-color: #e5fad7;
+}
+
+.background-3 {
+  background-color: #fef1f4;
+}
+
+/*--- Global Background ---*/
+.background-main-color {
+  background-color: #f38844;
+}
+
+.background-second-color {
+  background-color: #022f7a;
+}
+
+.background-third-color {
+  background-color: #f0b800;
+}
+
+/*--- Text Color ---*/
+.text-main-color {
+  color: #f38844;
+}
+
+.text-second-color {
+  color: #022f7a;
+}
+
+/*--- Border Main Color ---*/
+.border-main-color {
+  border-color: #f38844 !important;
+}
+
+.border-second-color {
+  border-color: #022f7a !important;
+}
+
+ul.pagination.color li a {
+  background-color: #f38844;
+}
+
+ul.pagination.color-1 li a {
+  background-color: #022f7a;
+}
+
+a.btn-outline-primary {
+  border-color: #f38844;
+  color: #f38844;
+}
+a.btn-outline-primary:hover {
+  background-color: #f38844;
+}
+
+section .section-title h1 span {
+  color: #f38844;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  border: 1px solid #f38844;
+}
+
+.widget h4.widget-title {
+  color: #f38844;
+}
+
+.widget.widget_nav_menu ul li a:before,
+.widget.widget_recent_entries ul li a:before,
+.widget.widget_recent_comments ul li a:before,
+.widget.widget_archive ul li a:before,
+.widget.widget_categories ul li a:before,
+.widget.widget_meta ul li a:before,
+.widget.widget_rss ul li a:before {
+  color: #f38844;
+}
+
+h4.table-title {
+  color: #f38844;
+}
+
+.nav-tabs-2 .nav-link {
+  background-color: #f38844;
+}
+
+.timeline-item .date:before {
+  color: #f38844;
+}
+
+header a.model-link span {
+  background-color: #f38844;
+}
+
+header ul.nav-menu > li.active > a {
+  color: #f38844;
+}
+header ul.nav-menu > li > a:hover {
+  color: #f38844;
+}
+
+.mega-links-4columns ul.sub-menu-columns > li > a {
+  color: #f38844;
+}
+
+header a.model-link span {
+  background-color: #f38844;
+}
+
+.fixed-header-dark {
+  background-color: #f38844;
+}
+
+@media only screen and (max-width: 991px) {
+  #fixed-header-dark {
+    background-color: #f38844;
+  }
+}
+
+/*# sourceMappingURL=color-3.css.map */

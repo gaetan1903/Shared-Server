@@ -1,0 +1,70 @@
+.user-photo{
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+          border-color:white !important;
+          border-radius:5px !important;
+          }
+.btn-primary{
+          background-image: linear-gradient(to right, #dc3545, #eb3545) !important;
+          border-radius:20px !important;
+          transition-duration:0.1s !important;
+          font-size:15px !important;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+          border-color: #eb3545 !important;
+          }
+.btn-primary:hover{
+          background-color:#7a238a !important;
+          }
+.btn-primary:after{
+          background-color:white !important;
+          }
+.backgroun-white{
+                      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+                      }
+
+.active{
+background-image: linear-gradient(to right, #dc3545, #eb3545) !important;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.4) !important;
+border-radius:20px !important;}
+
+.form-control{
+            border-radius:20px !important;
+            border-width:1.5px !important;
+            border-color:#555 !important;
+            opacity:0.8 !important;
+            transition-duration:0.00000001s !important;
+            }
+.form-control:hover{
+                         border-color:white !important;
+                         transition-duration:0.2s !important;
+                         border-radius:20px !important;
+                         }
+.form-control:focus{
+                         border-bottom-color:#dc3545 !important;
+                         border-top-color:white !important;
+                         border-left-color:white !important;
+                         border-right-color:white !important; 
+                         border-radius:0px !important;
+                         transition-duration:0.7s !important;
+                         border-width: 2px !important;
+                         }
+.background-white{
+                         border-radius:5px;
+                         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.4) !important;
+                         }
+h1{
+color:#dc3545 !important;
+font-family:sans-serif;
+font-size:22px !important;}
+
+
+.menu-advanced{
+                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
+                   border-radius:5px !important;
+                   }
+                   
+.fa-pencil{
+     color:#eb3545 ;
+     }
+.fa-pencil:hover{
+     color:#dc3545;
+     }

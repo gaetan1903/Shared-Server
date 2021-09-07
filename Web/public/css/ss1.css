@@ -1,0 +1,25 @@
+.form-control{
+          border-radius: 20px !important;
+          border-color:white !important;
+          transition-duration:0.2s;
+      }
+
+.btn-block{
+border-radius: 30px !important;
+}
+
+.header-output{
+          background-color: #e53935;
+}
+
+.font-weight-500{
+              color: white;
+}
+
+.title-in, .icon_pin_alt, .icon_mail_alt, .icon_phone{
+color:white;
+}
+
+.fa-bars{
+  color:#e53935; background-color:white;
+}

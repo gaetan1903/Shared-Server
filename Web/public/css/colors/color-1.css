@@ -1,0 +1,136 @@
+a.nile-bottom,
+#search .btn {
+  background-color: #00a1ad;
+}
+
+a.action-bottom:hover {
+  background-color: #00a1ad;
+}
+
+footer.layout-light .nile-widget.widget_nav_menu ul li a:before {
+  color: #00a1ad;
+}
+
+.background-1 {
+  background-color: #fffee5;
+}
+
+.background-2 {
+  background-color: #e5fad7;
+}
+
+.background-3 {
+  background-color: #fef1f4;
+}
+
+/*--- Global Background ---*/
+.background-main-color {
+  background-color: #00a1ad;
+}
+
+.background-second-color {
+  background-color: #022f7a;
+}
+
+.background-third-color {
+  background-color: #f0b800;
+}
+
+/*--- Text Color ---*/
+.text-main-color {
+  color: #00a1ad;
+}
+
+.text-second-color {
+  color: #022f7a;
+}
+
+/*--- Border Main Color ---*/
+.border-main-color {
+  border-color: #00a1ad !important;
+}
+
+.border-second-color {
+  border-color: #022f7a !important;
+}
+
+ul.pagination.color li a {
+  background-color: #00a1ad;
+}
+
+ul.pagination.color-1 li a {
+  background-color: #022f7a;
+}
+
+a.btn-outline-primary {
+  border-color: #00a1ad;
+  color: #00a1ad;
+}
+a.btn-outline-primary:hover {
+  background-color: #00a1ad;
+}
+
+section .section-title h1 span {
+  color: #00a1ad;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  border: 1px solid #00a1ad;
+}
+
+.widget h4.widget-title {
+  color: #00a1ad;
+}
+
+.widget.widget_nav_menu ul li a:before,
+.widget.widget_recent_entries ul li a:before,
+.widget.widget_recent_comments ul li a:before,
+.widget.widget_archive ul li a:before,
+.widget.widget_categories ul li a:before,
+.widget.widget_meta ul li a:before,
+.widget.widget_rss ul li a:before {
+  color: #00a1ad;
+}
+
+h4.table-title {
+  color: #00a1ad;
+}
+
+.nav-tabs-2 .nav-link {
+  background-color: #00a1ad;
+}
+
+.timeline-item .date:before {
+  color: #00a1ad;
+}
+
+header a.model-link span {
+  background-color: #00a1ad;
+}
+
+header ul.nav-menu > li.active > a {
+  color: #00a1ad;
+}
+header ul.nav-menu > li > a:hover {
+  color: #00a1ad;
+}
+
+.mega-links-4columns ul.sub-menu-columns > li > a {
+  color: #00a1ad;
+}
+
+header a.model-link span {
+  background-color: #00a1ad;
+}
+
+.fixed-header-dark {
+  background-color: #00a1ad;
+}
+
+@media only screen and (max-width: 991px) {
+  #fixed-header-dark {
+    background-color: #00a1ad;
+  }
+}
+
+/*# sourceMappingURL=color-1.css.map */

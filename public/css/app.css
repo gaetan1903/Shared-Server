@@ -1,0 +1,273 @@
+.nav-menu a.messages .badge, .nav-menu a.notifications .badge {
+          color:#e53935;        
+          background-color: white;  
+          border-radius: 45%;
+}
+
+        
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed; 
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #333;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+        
+        .sidenav a {
+          padding: 8px 8px 1px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+          color: white;
+        }
+        
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+
+
+
+
+        .text-main-color .fa-sliders{
+                  height: 10% !important;
+                  width:10% !important;
+                  position: relative; margin-left: 5%;
+        }
+
+        .fa-plus{
+              color: #e53935;
+        }
+
+
+       
+        
+        h5{
+          color:white;
+        }
+        a .h5{
+          background-color: #e53935;
+        }
+
+        .fa-comment, .fa-bell{
+          font-size: 16px !important;
+          color: white !important;
+        }
+
+        .fa-comment-o{
+          font-size: 16px !important;
+        }
+
+        .fa-circle{
+          font-size: 12px !important;
+          color:#2ebc4f !important;
+        }
+
+        header{
+          z-index: 0 !important;
+        }
+        
+        .fa-sliders{
+          color: white !important;
+          font-size:20px;
+          
+        }
+
+
+
+        
+          .active-cyan-2 input[type=text]:focus:not([readonly]) {
+          border-bottom: none white;
+          box-shadow: none white;
+          }
+          .active-cyan input[type=text] {
+          border-bottom: none white;
+          box-shadow: none white;
+          }
+          .active-white .fa, .active-white-2 .fa {
+          color: white;
+          }
+
+
+
+
+          .fa-arrow-left{
+            font-size: 20px !important;
+          }
+
+          .fa-music{
+            font-size: 82px !important;
+          }
+
+          .fa-close, .fa-download{
+            font-size:22px !important;
+          }
+
+
+          audio {
+            width: 245px;
+            height: 54px;
+            grid-area: initial;
+            border: 6px solid #e53935;
+        }
+
+        audio ::after ::before {
+          box-sizing:white !important;
+          border: 6px solid #e53935;
+      }
+
+      .addd{
+        margin-bottom: 10%;
+      }
+
+      .fa-file{
+        font-size:50px !important;
+        color: #e53935 !important;
+      }
+
+      h4{
+        color: #e53935;
+        font-size: 20px;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+      .form-inline {
+        display: inline-block;
+    }
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {		
+		background: #032f62;
+		border:none !important;
+		border-radius:0px;
+		padding-left: 16px;
+		padding-right: 16px;
+		box-shadow: 0 0 4px rgba(0,0,0,.1);
+	}
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	.search-box {
+        position: relative;
+    }	
+    .search-box input {
+	box-shadow: none;
+        padding-right: 35px;
+        border-radius: 3px !important;
+    }
+	.search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px;
+	height: 100%;
+    }
+    .search-box i {
+        color: #a0a5b1;
+	font-size: 19px;
+    }
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+	.navbar .nav-item.open > a {
+		background: none !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: white;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .dropdown-menu li a {
+		color: #999;
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+		color: #333;
+	}	
+	.navbar .dropdown-item .material-icons {
+		font-size: 21px;
+		line-height: 16px;
+		vertical-align: middle;
+		margin-top: -2px;
+	}
+	.navbar .badge {
+		background: #f44336;
+		font-size: 11px;
+		border-radius: 20px;
+		position: absolute;
+		min-width: 10px;
+		padding: 4px 6px 0;
+		min-height: 18px;
+		top: 5px;
+	}
+	.navbar ul.nav li a.notifications, .navbar ul.nav li a.messages {
+		position: relative;
+		margin-right: 10px;
+	}
+	.navbar ul.nav li a.messages {
+		margin-right: 20px;
+	}
+	.navbar a.notifications .badge {
+		margin-left: -8px;
+	}
+	.navbar a.messages .badge {
+		margin-left: -4px;
+	}	
+	.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+		background: transparent !important;
+	}
+
+
+          
+
+
+
